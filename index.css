@@ -28,6 +28,24 @@
     padding: 0 20px;
   }
 
+  .hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .name-box {
+    padding: 40px 60px;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 2px solid #000;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
   .section-divider {
     display: flex;
     align-items: center;
