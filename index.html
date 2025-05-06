@@ -21,9 +21,9 @@
     <section id="home">
         <div class="hero">
             <div class="hero-text">
-                <h1 id="name">Dan Pudig</h1>
-                <p id="job">Software Engineer & Web Developer</p>
-                <p id="tagline">Solving problems, one semicolon at a time</p>
+                <h1 id="hero-name">Dan Pudig</h1>
+                <p id="hero-job">Software Engineer & Web Developer</p>
+                <p id="hero-tag">Solving problems, one semicolon at a time</p>
             </div>
         </div>
     </section>
@@ -41,16 +41,19 @@
         </div>
         <p>COMING SOON!</p>
     </section>
+
+    <!--<section class="section-block" id="skills">
+        <div class="section-tab">
+          <i class="fas fa-code"></i> <strong>Skills</strong>
+        </div>
+        <p>COMING SOON!</p>
+      </section>-->
     
     <section id="projects">
         <div class="section-divider">
             <div class="section-title">PROJECTS</div>
         </div>
-        <div class="project">
-            <h3>Project One</h3>
-            <p>COMING SOON!</p>
-            <a href="#" id="github">View GitHub</a>
-        </div>
+        <p>COMING SOON!</p>
     </section>
     
     <section id="contact">
@@ -58,12 +61,37 @@
         <div class="section-divider">
             <div class="section-title">CONTACT</div>
         </div>
-        <p>Email: <a href="mailto:danpudig@outlook.com">danpudig@outlook.com</a></p>
-        <p><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+        <div class="contact-header">
+            <h2>Get In Touch</h2>
+            <p>Whether it's a question, collaboration idea, or just a friendly hello - I'd love to hear from you.</p>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+        
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+        
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     
     <footer>
-        FOOTER MOMENT
+        <div class="footer-links">
+            <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub">
+              <img class="icon" src="github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn">
+              <img class="icon" src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="resume.pdf" download>
+                <img class="icon" src="download.png" alt="Resume">
+            </a>
+          </div>
+          <p>© 2025 Dan Pudig</p>
     </footer>
 
     <script>
