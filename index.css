@@ -2,12 +2,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
-    background-color: pink !important;
     font-family: sans-serif;
     margin: 0;
-    padding-top: 60px; /* header height offset */
-    background-color: #fdfdfd;
+    background-color: #f0f0f0;
     color: #111;
 }
 
@@ -25,27 +29,69 @@ header {
 
 section {
     max-width: 800px;
-    margin: 60px auto;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+/* ----------------------------------------------------------------------- */
+/*                               Hero section                              */
+
+#home {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.name-box {
-    padding: 40px 60px;
-    background-color: white;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    border: 2px solid #000;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
+.hero {
+    background-image: url('landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               About section                             */
 
 .section-divider {
     display: flex;
@@ -82,4 +128,24 @@ footer {
 a {
     color: #007acc;
     text-decoration: none;
+}
+
+#about {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+}
+
+#projects {
+    background-color: #eaeaea;
+    padding: 60px 20px;
+}
+
+#contact {
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+footer {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
 }
