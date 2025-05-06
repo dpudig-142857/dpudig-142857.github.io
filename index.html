@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan's Personal Website</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="preload" href="landing.jpg" as="image">
+    <link rel="preload" href="hero.jpg" as="image">
 </head>
 <body>
     <header>
-        BETTER HEADER COMING SOON!!!
+        <nav class="navbar">
+            <a data-target="home">Home</a>
+            <a data-target="about">About</a>
+            <a data-target="skills">Skills</a>
+            <a data-target="projects">Projects</a>
+            <a data-target="contact">Contact</a>
+        </nav>
     </header>
 
     <section id="home">
         <div class="hero">
             <div class="hero-text">
-                <h1>Dan Pudig</h1>
-                <p>Software Engineer & Web Developer</p>
+                <h1 id="name">Dan Pudig</h1>
+                <p id="job">Software Engineer & Web Developer</p>
+                <p id="tagline">Solving problems, one semicolon at a time</p>
             </div>
         </div>
     </section>
@@ -25,7 +32,14 @@
         <div class="section-divider">
             <div class="section-title">ABOUT</div>
         </div>
-        <p>Hello! I'm a web developer passionate about building simple, elegant websites. Currently looking for opportunities where I can help build intuitive, high-performance user interfaces.</p>
+        <p>COMING SOON!</p>
+    </section>
+    
+    <section id="skills">
+        <div class="section-divider">
+            <div class="section-title">SKILLS</div>
+        </div>
+        <p>COMING SOON!</p>
     </section>
     
     <section id="projects">
@@ -33,14 +47,14 @@
             <div class="section-title">PROJECTS</div>
         </div>
         <div class="project">
-            <h3>Cool Project One</h3>
-            <p>Built with HTML, CSS, and JS. A personal project to solve [insert problem].</p>
-            <a href="#">View GitHub</a>
+            <h3>Project One</h3>
+            <p>COMING SOON!</p>
+            <a href="#" id="github">View GitHub</a>
         </div>
     </section>
     
     <section id="contact">
-        <!-- FORMSPREE FORM -->
+        <!-- FORMSPREE FORM TO ADD LATER -->
         <div class="section-divider">
             <div class="section-title">CONTACT</div>
         </div>
@@ -51,6 +65,17 @@
     <footer>
         FOOTER MOMENT
     </footer>
+
+    <script>
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
 </html>
