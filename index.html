@@ -30,28 +30,21 @@
     
     <section id="about">
         <div class="section-divider">
-            <div class="section-title">ABOUT</div>
-        </div>
-        <p>COMING SOON!</p>
-    </section>
-    
-    <section id="skills">
-        <div class="section-divider">
-            <div class="section-title">SKILLS</div>
+            <div class="section-header">ABOUT</div>
         </div>
         <p>COMING SOON!</p>
     </section>
 
-    <!--<section class="section-block" id="skills">
-        <div class="section-tab">
-          <i class="fas fa-code"></i> <strong>Skills</strong>
+    <section class="section-block" id="skills">
+        <div class="section-divider">
+            <div class="section-header">SKILLS</div>
         </div>
         <p>COMING SOON!</p>
-      </section>-->
+      </section>
     
     <section id="projects">
         <div class="section-divider">
-            <div class="section-title">PROJECTS</div>
+            <div class="section-header">PROJECTS</div>
         </div>
         <p>COMING SOON!</p>
     </section>
@@ -59,24 +52,26 @@
     <section id="contact">
         <!-- FORMSPREE FORM TO ADD LATER -->
         <div class="section-divider">
-            <div class="section-title">CONTACT</div>
+            <div class="section-header">CONTACT</div>
         </div>
-        <div class="contact-header">
-            <h2>Get In Touch</h2>
-            <p>Whether it's a question, collaboration idea, or just a friendly hello - I'd love to hear from you.</p>
+        <div class="contact-section">
+            <div id="contact-s" class="contact-header">
+                <h2>Excited to<br>know more?</h2>
+                <p>Let's talk!</p>
+            </div>
+            <form  id="contact-s" class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Name...">
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" required placeholder="Email Address...">
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Message..."></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-        <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-        
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" required>
-        
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-        
-            <button type="submit">Send Message</button>
-        </form>
     </section>
     
     <footer>
