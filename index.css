@@ -30,6 +30,9 @@ header {
     font-weight: bold;
     z-index: 1000;
     transition: background 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 nav.navbar {
@@ -53,6 +56,42 @@ nav.navbar a:hover {
     transform: scale(1.2);
     text-decoration: underline;
     cursor: pointer;
+}
+
+#header-download {
+    position: relative;
+    display: inline-block;
+}
+
+.header-resume {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#header-download a:hover .header-resume {
+    visibility: visible;
+    opacity: 1;
+}
+
+#header-download a img {
+    width: 24px;
+    height: 24px;
+}
+
+#header-download a img:hover {
+    transform: scale(1.2);
 }
 
 /* ----------------------------------------------------------------------- */
@@ -146,6 +185,31 @@ nav.navbar a:hover {
     padding: 20px 40px 60px;
 }
 
+#about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#about-left {
+    width: 70%;
+    text-align: center;
+}
+
+#about-right {
+    width: 30%;
+    text-align: center;
+}
+
+#about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
 
 /* ----------------------------------------------------------------------- */
 /*                              Skills section                             */
@@ -153,6 +217,48 @@ nav.navbar a:hover {
 #skills {
     background-color: #FF2A00;
     padding: 20px 40px 60px;
+}
+
+#skills-col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#skills-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.skill-box {
+    background-color: #FF8500;
+    border: 3px solid black;
+    width: 13%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 15%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.6),     /* deep shadow */
+        0 10px 15px rgba(0, 0, 0, 0.4),     /* inner layer */
+        0 0 20px rgba(255, 133, 0, 0.7);    /* strong glow */
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.65),
+        0 12px 18px rgba(0, 0, 0, 0.45),
+        0 0 28px rgba(255, 133, 0, 0.9);
+}
+
+.skill {
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -276,11 +382,11 @@ nav.navbar a:hover {
 footer {
     background-color: #FFEDDA;
     color: #111;
-    padding: 37px 0 0;
+    padding: 35px 0 1px;
     text-align: center;
 }
 
-footer .footer-links {
+.footer-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,11 +394,39 @@ footer .footer-links {
     margin-bottom: 10px;
 }
 
-footer .footer-links a img {
-    width: 24px;   /* consistent icon size */
+.footer-links a img {
+    width: 24px;
     height: 24px;
 }
 
-footer .footer-links a img:hover {
-    transform: scale(1.2);  /* optional hover effect */
+.footer-links a img:hover {
+    transform: scale(1.2);
+}
+
+#footer-link {
+    position: relative;
+    display: inline-block;
+}
+
+#footer-link a:hover .footer-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-box {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }

@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <div id="logo">
+            LOGO<br>MAYBE?
+        </div>
         <nav class="navbar">
             <a data-target="home">Home</a>
             <a data-target="about">About</a>
@@ -16,6 +19,12 @@
             <a data-target="projects">Projects</a>
             <a data-target="contact">Contact</a>
         </nav>
+        <div id="header-download">
+            <a href="resume.pdf" download>
+                <img class="icon" src="download.png" alt="Resume">
+                <span class="header-resume">Download Resume</span>
+            </a>
+        </div>
     </header>
 
     <section id="home">
@@ -32,14 +41,109 @@
         <div class="section-divider">
             <div class="section-header">ABOUT</div>
         </div>
-        <p>COMING SOON!</p>
+        <div id="about-section">
+            <div id="about-left">
+                <p>HELLO1</p>
+            </div>
+            <div id="about-right">
+                <img id="about-photo" src="me.jpg" alt="Dan Pudig's Graduation Photo">
+            </div>
+        </div>
     </section>
 
     <section class="section-block" id="skills">
         <div class="section-divider">
             <div class="section-header">SKILLS</div>
         </div>
-        <p>COMING SOON!</p>
+        <div id="skills-col">
+            <div id="skills-row">
+                <div class="skill-box">
+                    <img class="skill" src="skills/html.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/css.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/javascript.png" alt="Javascript">
+                    <p>Javascript</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/java.png" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/python.png" alt="Python">
+                    <p>Python</p>
+                </div>
+            </div>
+            <div id="skills-row">
+                <div class="skill-box">
+                    <img class="skill" src="skills/c.png" alt="C">
+                    <p>C</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/c++.png" alt="C++">
+                    <p>C++</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/c-sharp.png" alt="C#">
+                    <p>C#</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/sql.png" alt="SQL">
+                    <p>SQL</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/json.png" alt="JSON">
+                    <p>JSON</p>
+                </div>
+            </div>
+            <div id="skills-row">
+                <div class="skill-box">
+                    <img class="skill" src="skills/haskell.png" alt="Haskell">
+                    <p>Haskell</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" id="gcp" src="skills/gcp.png" alt="GCP">
+                    <p>GCP</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/chatgpt.png" alt="ChatGPT">
+                    <p>ChatGPT</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/llm.png" alt="Other LLMs">
+                    <p>Other LLMs</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/git.png" alt="Git">
+                    <p>Git</p>
+                </div>
+            </div><div id="skills-row">
+                <div class="skill-box">
+                    <img class="skill" src="skills/jira.png" alt="Jira">
+                    <p>Jira</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/data.png" alt="Data Structures">
+                    <p>Data Structures</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/algorithm.png" alt="Algorithms">
+                    <p>Algorithms</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/agile.png" alt="Agile">
+                    <p>Agile</p>
+                </div>
+                <div class="skill-box">
+                    <img class="skill" src="skills/documents.png" alt="Documentation">
+                    <p>Documentation</p>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="projects">
@@ -76,15 +180,24 @@
     
     <footer>
         <div class="footer-links">
-            <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub">
-                <img class="icon" src="github.svg" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn">
-                <img class="icon" src="linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="resume.pdf" download>
-                <img class="icon" src="download.png" alt="Resume">
-            </a>
+            <div id="footer-link">
+                <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub">
+                    <img class="icon" src="github.svg" alt="GitHub">
+                    <span class="footer-box">Go to GitHub</span>
+                </a>
+            </div>
+            <div id="footer-link">
+                <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn">
+                    <img class="icon" src="linkedin.png" alt="LinkedIn">
+                    <span class="footer-box">Go to LinkedIn</span>
+                </a>
+            </div>
+            <div id="footer-link">
+                <a href="resume.pdf" download>
+                    <img class="icon" src="download.png" alt="Resume">
+                    <span class="footer-box">Download Resume</span>
+                </a>
+            </div>
         </div>
         <p>© 2025 Dan Pudig</p>
     </footer>
