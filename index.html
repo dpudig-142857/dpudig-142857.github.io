@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan's Personal Website</title>
+    <title>Dan Pudig's Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preload" href="hero.jpg" as="image">
 </head>
@@ -40,7 +40,7 @@
             <div class="section-header">SKILLS</div>
         </div>
         <p>COMING SOON!</p>
-      </section>
+    </section>
     
     <section id="projects">
         <div class="section-divider">
@@ -50,7 +50,6 @@
     </section>
     
     <section id="contact">
-        <!-- FORMSPREE FORM TO ADD LATER -->
         <div class="section-divider">
             <div class="section-header">CONTACT</div>
         </div>
@@ -59,17 +58,18 @@
                 <h2>Excited to<br>know more?</h2>
                 <p>Let's talk!</p>
             </div>
-            <form  id="contact-s" class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+            <form  id="contact-s" class="contact-form" action="https://formspree.io/f/meoggyro" method="POST">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Name...">
+                <input type="text" id="name" name="Name" required placeholder="Name...">
             
                 <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" required placeholder="Email Address...">
+                <input type="email" id="email" name="Email" required placeholder="Email Address...">
             
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required placeholder="Message..."></textarea>
+                <textarea id="message" name="Message" rows="6" required placeholder="Message..."></textarea>
             
                 <button type="submit">Send Message</button>
+                <p id="contact-status"></p>
             </form>
         </div>
     </section>
@@ -77,28 +77,18 @@
     <footer>
         <div class="footer-links">
             <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub">
-              <img class="icon" src="github.svg" alt="GitHub">
+                <img class="icon" src="github.svg" alt="GitHub">
             </a>
             <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn">
-              <img class="icon" src="linkedin.png" alt="LinkedIn">
+                <img class="icon" src="linkedin.png" alt="LinkedIn">
             </a>
             <a href="resume.pdf" download>
                 <img class="icon" src="download.png" alt="Resume">
             </a>
-          </div>
-          <p>© 2025 Dan Pudig</p>
+        </div>
+        <p>© 2025 Dan Pudig</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('.navbar a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
-
+    <script src="index.js"></script>
 </body>
 </html>
