@@ -194,7 +194,29 @@ nav.navbar a:hover {
 
 #about-left {
     width: 70%;
+}
+
+#about-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.about-box {
+    background-color: #FF4D1A;
+    border: 6px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 25%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.6),     /* deep shadow */
+        0 10px 15px rgba(0, 0, 0, 0.4),     /* inner layer */
+        0 0 20px rgba(255, 60, 10, 0.7);    /* strong glow */
 }
 
 #about-right {
@@ -297,31 +319,22 @@ nav.navbar a:hover {
 }
 
 .contact-header {
-    /*max-width: 500px;
-    text-align: center;
-    vertical-align: center;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100%;
-    min-height: 350px; /* adjust as needed */
+    min-height: 350px;
 }
 
 .contact-header h2 {
-    /*font-size: 3rem;
-    margin-bottom: 20px;
-    color: #111;*/
     font-size: 5rem;
     margin-bottom: 10px;
     color: #111;
 }
 
 .contact-header p {
-    /*font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;*/
     font-size: 4rem;
     color: #111;
     font-weight: bold;
