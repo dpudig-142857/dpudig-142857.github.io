@@ -241,7 +241,16 @@ nav.navbar a:hover {
     padding: 20px 40px 60px;
 }
 
-#skills-col {
+#skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3vw 4vw;
+    padding: 2rem 4vw;
+}
+
+/*#skills-col {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -251,12 +260,35 @@ nav.navbar a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
+}*/
 
 .skill-box {
+    width: clamp(140px, 18vw, 200px);
+    height: 12rem; /* Fixed uniform height */
+    background-color: #FF8500;
+    border: 0.2rem solid black;
+    border-radius: 15%;
+    box-shadow:
+        0 1rem 2rem rgba(0, 0, 0, 0.6),
+        0 0.7rem 1rem rgba(0, 0, 0, 0.4),
+        0 0 1.2rem rgba(255, 133, 0, 0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+    overflow: hidden;
+    
+    /*max-width: calc(20% - 60px);
     background-color: #FF8500;
     border: 3px solid black;
-    width: 13%;
+    /*width: 13%;*
+    width: clamp(120px, 13%, 160px);
     height: 100%;
     padding: 10px;
     text-align: center;
@@ -265,9 +297,14 @@ nav.navbar a:hover {
     border-radius: 15%;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     box-shadow:
-        0 15px 30px rgba(0, 0, 0, 0.6),     /* deep shadow */
-        0 10px 15px rgba(0, 0, 0, 0.4),     /* inner layer */
+        0 15px 30px rgba(0, 0, 0, 0.6),     /* deep shadow *
+        0 10px 15px rgba(0, 0, 0, 0.4),     /* inner layer *
         0 0 20px rgba(255, 133, 0, 0.7);    /* strong glow */
+}
+
+.skill-box p {
+    word-break: break-word;
+    margin: 0;
 }
 
 .skill-box:hover {
@@ -279,8 +316,30 @@ nav.navbar a:hover {
 }
 
 .skill {
-    width: 100px;
-    height: 100px;
+    /*width: 100px;
+    height: 100px;*/
+    /*width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;*/
+
+    /*max-width: 80%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;*/
+
+    /*max-width: 60%;
+    max-height: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.8rem;*/
+
+    width: 60%;
+    max-height: 6rem;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 
