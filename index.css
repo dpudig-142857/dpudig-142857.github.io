@@ -321,6 +321,88 @@ nav.navbar a:hover {
     padding: 1.25rem 2.5rem 3.75rem;
 }
 
+.project-section {
+    margin-bottom: 2.5rem;
+}
+
+.project-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.project-box {
+    background-color: #FFCB2B;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+        0 1rem 2rem rgba(0, 0, 0, 0.6),       /* deep shadow */
+        0 0.7rem 1rem rgba(0, 0, 0, 0.4),     /* mid shadow */
+        0 0 1.2rem rgba(255, 203, 43, 0.7);   /* golden glow */
+}
+
+.project-box:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 100%;
+    height: 11.25rem;
+    object-fit: cover;
+    border-bottom: 0.125rem solid #FFCB2B;
+}
+
+.project-content {
+    padding: 1rem;
+    color: #333;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.project-creators,
+.project-languages {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #FFF;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.project-link:hover {
+    background-color: #000;
+    color: #FFCB2B;
+}
+
 
 /* ----------------------------------------------------------------------- */
 /*                             Contact section                             */
