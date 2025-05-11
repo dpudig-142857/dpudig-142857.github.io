@@ -187,7 +187,7 @@ nav.navbar a:hover {
 #about {
     background-color: #FF5E3A;
     padding: 1.25rem 2.5rem 3.75rem;
-    height: 95vh;
+    height: max-content;
 }
 
 #about-section {
@@ -195,6 +195,7 @@ nav.navbar a:hover {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding: 2.2rem 0;
 }
 
 #about-left {
