@@ -247,6 +247,23 @@ nav.navbar a:hover {
     border: 0.625rem solid black;
 }
 
+@media (max-width: 768px) {
+    #about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-left, #about-right {
+        width: 90%;
+    }
+
+    #about-photo {
+        width: 60%;
+        height: auto;
+        margin-top: 1rem;
+    }
+}
+
 
 /* ----------------------------------------------------------------------- */
 /*                              Skills section                             */
