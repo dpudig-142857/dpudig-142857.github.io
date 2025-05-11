@@ -242,9 +242,12 @@ nav.navbar a:hover {
 #about-photo {
     width: 100%;
     height: auto;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 0.625rem solid black;
+    display: block;
+    margin: 0 auto;
 }
 
 
