@@ -67,7 +67,7 @@ nav.navbar a:hover {
     display: inline-block;
 }
 
-.header-resume {
+.header-cv {
     visibility: hidden;
     background-color: #333;
     color: #fff;
@@ -84,7 +84,7 @@ nav.navbar a:hover {
     transition: opacity 0.3s;
 }
 
-#header-download a:hover .header-resume {
+#header-download a:hover .header-cv {
     visibility: visible;
     opacity: 1;
 }
@@ -285,6 +285,7 @@ nav.navbar a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 
     font-weight: bold;
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -310,6 +311,16 @@ nav.navbar a:hover {
     object-fit: contain;
     display: block;
     margin-bottom: 0.5rem;
+}
+
+#skill-agile {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+#skill-agile span {
+    font-size: 0.9rem;
 }
 
 
@@ -339,7 +350,7 @@ nav.navbar a:hover {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .projects-grid a {
@@ -380,15 +391,14 @@ nav.navbar a:hover {
     color: #333;
 }
 
-.project-title {
+.project-content h3 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-align: center;
 }
 
-.project-creators,
-.project-languages {
+.project-content p {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
