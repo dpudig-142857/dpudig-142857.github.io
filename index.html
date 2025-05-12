@@ -181,27 +181,84 @@
         <div class="project-section">
             <h2 class="project-header">Professional Projects</h2>
             <div class="projects-grid">
-                <a href="https://github.com/dpudig-142857/COMP3900-Project.git" target="_blank">
-                    <div class="project-box">
-                        <img src="projects/neo4j_eye_data.png" alt="Project preview" class="project-image" />
-                        <div class="project-content">
-                            <h3>What is hidden in the metabolomics of the tear film of the eye - COMP3900 Capstone Project</h3>
-                            <p><strong>Creators:</strong> Dan Pudig and 5 other team members</p>
-                            <p><strong>Contribution:</strong> UX/UI Design & SCRUM Master</p>
-                            <p><strong>Languages:</strong> HTML, CSS, JavaScript, Python, SQL, JSON</p>
+                <div class="project-box" onclick="openModal('modal1')">
+                    <img src="projects/metabolomics_0.png" alt="Project preview" class="project-image" />
+                    <div class="project-content">
+                        <h3>Tear Film Metabolomics Website</h3>
+                        <p><strong>Click to learn more</strong></p>
+                    </div>
+                </div>
+
+                <div class="project-box" onclick="openModal('modal2')">
+                    <img src="projects/arcade_0.png" alt="Project preview" class="project-image" />
+                    <div class="project-content">
+                        <h3>Arcade Game Collection</h3>
+                        <p><strong>Click to learn more</strong></p>
+                    </div>
+                </div>
+            </div>
+            <!-- COMP3900 Project Modal -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2 class="modal-title">What is hidden in the metabolomics of the tear film of the eye?</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">As part of my COMP3900 Capstone Project, I worked with a team of six to build a web-based visualization tool designed for optometrists. The tool helps users explore how different metabolites, compounds, and biological pathways are connected in the tear film of the eye - useful for both research and clinical insights.</div>
+                                <br>
+                                <div class="info-content">I was responsible for the UX/UI design and took on the role of SCRUM master, coordinating development and keeping the project running smoothly across sprints.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">HTML, CSS, JavaScript, Python, SQL, JSON</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/COMP3900-Project.git" target="_blank" class="github-button">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="metabolomicsImage" src="projects/metabolomics_0.png" alt="Metabolomics Screenshot" />
+                                <div class="gallery-controls">
+                                    <button onclick="prevMetabolomics()">&#8592;</button>
+                                    <span id="metabolomicsCounter">1 / 1</span>
+                                    <button onclick="nextMetabolomics()">&#8594;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <a href="https://github.com/dpudig-142857/Arcade.git" target="_blank">
-                    <div class="project-box">
-                        <img src="projects/arcade.png" alt="Project preview" class="project-image" />
-                        <div class="project-content">
-                            <h3>Arcade</h3>
-                            <p><strong>Creator:</strong> Dan Pudig</p>
-                            <p><strong>Languages:</strong> Java</p>
+                </div>
+            </div>
+
+            <!-- Arcade Modal -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2 class="modal-title">Arcade</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">An arcade-style application developed as my final project for the HSC Software Design & Development course. It includes two classic games, 2048 and Connect Four, each built from scratch with their own graphics and gameplay mechanics to showcase principles of software design and user interaction.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">Java</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Arcade.git" target="_blank" class="github-button">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="arcadeImage" src="projects/arcade_0.png" alt="Arcade Screenshot" />
+                                <div class="gallery-controls">
+                                    <button onclick="prevArcade()">&#8592;</button>
+                                    <span id="arcadeCounter">1 / 6</span>
+                                    <button onclick="nextArcade()">&#8594;</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <div class="project-section">

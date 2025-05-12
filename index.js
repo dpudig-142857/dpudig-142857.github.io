@@ -36,3 +36,72 @@ async function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Optional: Close when clicking outside the modal
+window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};
+
+const arcadeImages = [
+  'projects/arcade_0.png',
+  'projects/arcade_1.png',
+  'projects/arcade_2.png',
+  'projects/arcade_3.png',
+  'projects/arcade_4.png',
+  'projects/arcade_5.png'
+];
+
+let currArcade = 0;
+
+function showArcade(index) {
+  const img = document.getElementById('arcadeImage');
+  const counter = document.getElementById('arcadeCounter');
+  img.src = arcadeImages[index];
+  counter.textContent = `${index + 1} / ${arcadeImages.length}`;
+}
+
+function nextArcade() {
+  currArcade = (currArcade + 1) % arcadeImages.length;
+  showArcade(currArcade);
+}
+
+function prevArcade() {
+  currArcade = (currArcade - 1 + arcadeImages.length) % arcadeImages.length;
+  showArcade(currArcade);
+}
+
+
+const metabolomicsImages = [
+    'projects/metabolomics_0.png'
+];
+
+let currMetabolomics = 0;
+
+function showMetabolomics(index) {
+  const img = document.getElementById('metabolomicsImage');
+  const counter = document.getElementById('metabolomicsCounter');
+  img.src = metabolomicsImages[index];
+  counter.textContent = `${index + 1} / ${metabolomicsImages.length}`;
+}
+
+function nextMetabolomics() {
+  currMetabolomics = (currMetabolomics + 1) % metabolomicsImages.length;
+  showMetabolomics(currMetabolomics);
+}
+
+function prevMetabolomics() {
+  currMetabolomics = (currMetabolomics - 1 + metabolomicsImages.length) % metabolomicsImages.length;
+  showMetabolomics(currMetabolomics);
+}
