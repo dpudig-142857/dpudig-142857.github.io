@@ -181,7 +181,7 @@
         <div class="project-section">
             <h2 class="project-header">Professional Projects</h2>
             <div class="projects-grid">
-                <div class="project-box" onclick="openModal('modal1')">
+                <div class="project-box" onclick="openModal('modal_3900')">
                     <img src="projects/metabolomics_0.png" alt="Project preview" class="project-image" />
                     <div class="project-content">
                         <h3>Tear Film Metabolomics Website</h3>
@@ -189,7 +189,15 @@
                     </div>
                 </div>
 
-                <div class="project-box" onclick="openModal('modal2')">
+                <div class="project-box" onclick="openModal('modal_tax')">
+                    <img src="projects/tax_calculator_0.png" alt="Project preview" class="project-image" />
+                    <div class="project-content">
+                        <h3>Tax Calculator</h3>
+                        <p><strong>Click to learn more</strong></p>
+                    </div>
+                </div>
+                
+                <div class="project-box" onclick="openModal('modal_arcade')">
                     <img src="projects/arcade_0.png" alt="Project preview" class="project-image" />
                     <div class="project-content">
                         <h3>Arcade Game Collection</h3>
@@ -197,10 +205,11 @@
                     </div>
                 </div>
             </div>
+
             <!-- COMP3900 Project Modal -->
-            <div id="modal1" class="modal">
+            <div id="modal_3900" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <span class="close" onclick="closeModal('modal_3900')">&times;</span>
                     <h2 class="modal-title">What is hidden in the metabolomics of the tear film of the eye?</h2>
                     <div class="modal-body">
                         <div class="modal-info">
@@ -230,10 +239,41 @@
                 </div>
             </div>
 
-            <!-- Arcade Modal -->
-            <div id="modal2" class="modal">
+            <!-- Tax Calculator Modal -->
+            <div id="modal_tax" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <span class="close" onclick="closeModal('modal_tax')">&times;</span>
+                    <h2 class="modal-title">Tax Calculator</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content"></div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content"></div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Land-Tax-Planning-Tool.git" target="_blank" class="github-button">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="taxImage" src="projects/tax_calculator_0.png" alt="Tax Calculator Screenshot" />
+                                <div class="gallery-controls">
+                                    <button onclick="prevTax()">&#8592;</button>
+                                    <span id="taxCounter">1 / 1</span>
+                                    <button onclick="nextTax()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arcade Modal -->
+            <div id="modal_arcade" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_arcade')">&times;</span>
                     <h2 class="modal-title">Arcade</h2>
                     <div class="modal-body">
                         <div class="modal-info">
@@ -260,12 +300,52 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
         <div class="project-section">
             <h2 class="project-header">Personal Projects</h2>
             <div class="projects-grid">
-                
+                <div class="project-box" onclick="openModal('modal_gog')">
+                    <img src="projects/gog_0.png" alt="Game of Games preview" class="project-image" />
+                    <div class="project-content">
+                        <h3>Game of Games</h3>
+                        <p><strong>Click to learn more</strong></p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Game of Games Modal -->
+            <div id="modal_gog" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_gog')">&times;</span>
+                    <h2 class="modal-title">Game of Games</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content"></div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">HTML, CSS, Javascript, JSON</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Game-of-Games.git" target="_blank" class="github-button">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="gogImage" src="projects/gog_0.png" alt="Game of Games Screenshot" />
+                                <div class="gallery-controls">
+                                    <button onclick="prevGoG()">&#8592;</button>
+                                    <span id="gogCounter">1 / 1</span>
+                                    <button onclick="nextGoG()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
     

@@ -82,6 +82,28 @@ function prevArcade() {
   showArcade(currArcade);
 }
 
+const taxImages = [
+    'projects/tax_calculator_0.png'
+];
+
+let currTax = 0;
+
+function showTax(index) {
+  const img = document.getElementById('taxImage');
+  const counter = document.getElementById('taxCounter');
+  img.src = taxImages[index];
+  counter.textContent = `${index + 1} / ${taxImages.length}`;
+}
+
+function nextTax() {
+  currTax = (currTax + 1) % taxImages.length;
+  showMetabolomics(currTax);
+}
+
+function prevTax() {
+  currTax = (currTax - 1 + taxImages.length) % taxImages.length;
+  showMetabolomics(currTax);
+}
 
 const metabolomicsImages = [
     'projects/metabolomics_0.png'
@@ -104,4 +126,27 @@ function nextMetabolomics() {
 function prevMetabolomics() {
   currMetabolomics = (currMetabolomics - 1 + metabolomicsImages.length) % metabolomicsImages.length;
   showMetabolomics(currMetabolomics);
+}
+
+const gogImages = [
+    'projects/gog_0.png'
+];
+
+let currGoG = 0;
+
+function showGoG(index) {
+  const img = document.getElementById('gogImage');
+  const counter = document.getElementById('gogCounter');
+  img.src = gogImages[index];
+  counter.textContent = `${index + 1} / ${gogImages.length}`;
+}
+
+function nextGoG() {
+  currGoG = (currGoG + 1) % gogImages.length;
+  showGoG(currGoG);
+}
+
+function prevGoG() {
+  currGoG = (currGoG - 1 + gogImages.length) % gogImages.length;
+  showGoG(currGoG);
 }
