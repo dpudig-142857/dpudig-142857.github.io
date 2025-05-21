@@ -54,99 +54,58 @@ window.onclick = function(event) {
     });
 };
 
-const arcadeImages = [
-  'projects/arcade_0.png',
-  'projects/arcade_1.png',
-  'projects/arcade_2.png',
-  'projects/arcade_3.png',
-  'projects/arcade_4.png',
-  'projects/arcade_5.png'
-];
+const arcadeCarousel = createCarousel({
+    images: [
+        'projects/arcade_0.webp',
+        'projects/arcade_1.webp',
+        'projects/arcade_2.webp',
+        'projects/arcade_3.webp',
+        'projects/arcade_4.webp',
+        'projects/arcade_5.webp'
+    ],
+    imageId: 'arcadeImage',
+    counterId: 'arcadeCounter'
+});
 
-let currArcade = 0;
+const taxCarousel = createCarousel({
+    images: ['projects/tax_calculator_0.webp'],
+    imageId: 'taxImage',
+    counterId: 'taxCounter'
+});
 
-function showArcade(index) {
-  const img = document.getElementById('arcadeImage');
-  const counter = document.getElementById('arcadeCounter');
-  img.src = arcadeImages[index];
-  counter.textContent = `${index + 1} / ${arcadeImages.length}`;
-}
+const metabolomicsCarousel = createCarousel({
+    images: ['projects/metabolomics_0.webp'],
+    imageId: 'metabolomicsImage',
+    counterId: 'metabolomicsCounter'
+});
 
-function nextArcade() {
-  currArcade = (currArcade + 1) % arcadeImages.length;
-  showArcade(currArcade);
-}
+const gogCarousel = createCarousel({
+    images: ['projects/gog_0.webp'],
+    imageId: 'gogImage',
+    counterId: 'gogCounter'
+});
 
-function prevArcade() {
-  currArcade = (currArcade - 1 + arcadeImages.length) % arcadeImages.length;
-  showArcade(currArcade);
-}
+function createCarousel({ images, imageId, counterId }) {
+    let currentIndex = 0;
 
-const taxImages = [
-    'projects/tax_calculator_0.png'
-];
+    function show(index) {
+        const img = document.getElementById(imageId);
+        const counter = document.getElementById(counterId);
+        img.src = images[index];
+        counter.textContent = `${index + 1} / ${images.length}`;
+    }
 
-let currTax = 0;
+    function next() {
+        currentIndex = (currentIndex + 1) % images.length;
+        show(currentIndex);
+    }
 
-function showTax(index) {
-  const img = document.getElementById('taxImage');
-  const counter = document.getElementById('taxCounter');
-  img.src = taxImages[index];
-  counter.textContent = `${index + 1} / ${taxImages.length}`;
-}
+    function prev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        show(currentIndex);
+    }
 
-function nextTax() {
-  currTax = (currTax + 1) % taxImages.length;
-  showMetabolomics(currTax);
-}
+    show(currentIndex);
 
-function prevTax() {
-  currTax = (currTax - 1 + taxImages.length) % taxImages.length;
-  showMetabolomics(currTax);
-}
-
-const metabolomicsImages = [
-    'projects/metabolomics_0.png'
-];
-
-let currMetabolomics = 0;
-
-function showMetabolomics(index) {
-  const img = document.getElementById('metabolomicsImage');
-  const counter = document.getElementById('metabolomicsCounter');
-  img.src = metabolomicsImages[index];
-  counter.textContent = `${index + 1} / ${metabolomicsImages.length}`;
-}
-
-function nextMetabolomics() {
-  currMetabolomics = (currMetabolomics + 1) % metabolomicsImages.length;
-  showMetabolomics(currMetabolomics);
-}
-
-function prevMetabolomics() {
-  currMetabolomics = (currMetabolomics - 1 + metabolomicsImages.length) % metabolomicsImages.length;
-  showMetabolomics(currMetabolomics);
-}
-
-const gogImages = [
-    'projects/gog_0.png'
-];
-
-let currGoG = 0;
-
-function showGoG(index) {
-  const img = document.getElementById('gogImage');
-  const counter = document.getElementById('gogCounter');
-  img.src = gogImages[index];
-  counter.textContent = `${index + 1} / ${gogImages.length}`;
-}
-
-function nextGoG() {
-  currGoG = (currGoG + 1) % gogImages.length;
-  showGoG(currGoG);
-}
-
-function prevGoG() {
-  currGoG = (currGoG - 1 + gogImages.length) % gogImages.length;
-  showGoG(currGoG);
+    return { next, prev, show };
 }

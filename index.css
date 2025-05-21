@@ -39,6 +39,10 @@ header {
     justify-content: space-between;
 }
 
+#logo {
+    filter: grayscale(100%);
+}
+
 nav.navbar {
     display: flex;
     justify-content: center;
@@ -102,7 +106,7 @@ nav.navbar a:hover {
 /*                               Hero section                              */
 
 .hero {
-    background-image: url('hero-2.jpg');
+    background-image: url('other/trees.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

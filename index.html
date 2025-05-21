@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Pudig's Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preload" href="hero.jpg" as="image">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <link rel="stylesheet" href="index.mini.css">
+    <script src="index.mini.js" defer></script>
+
+    <!-- Google SEO meta tags -->
     <meta name="google-site-verification" content="UEtIFArGpTb2gnlArzCYbbLfLbA4ogH83EMpKonsosg" />
+    <meta name="description" content="I'm Dan Pudig, a web developer showcasing my skills, portfolio projects, and resume. Creative, detail-oriented, and always learning.">
+    
+    <!-- Loading trees image and dino icon for favicon -->
+    <link rel="preload" href="other/trees.webp" as="image">
+    <link type="image/png" sizes="32x32" rel="icon" href="other/dino.webp">
+
+    <!-- These tags control how the site looks when shared on Twitter/X. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dan Pudig's Portfolio">
+    <meta name="twitter:description" content="Explore my projects, skills, and resume.">
+    <meta name="twitter:image" content="https://dan.pudig.com/other/front_page.webp">
+
 </head>
 <body>
     <header>
-        <div id="logo">
-            <!--<img class="logo" src="logo/idea_3.png" alt="Logo">-->
-            LOGO<br>COMING
+        <div>
+            <img id="logo" src="other/dino_black.webp" alt="Logo">
+            <!--LOGO<br>COMING-->
         </div>
         <nav class="navbar">
             <a data-target="home">Home</a>
@@ -24,7 +39,7 @@
         </nav>
         <div id="header-download">
             <a href="Dan Pudig's CV.pdf" download>
-                <img class="icon" src="download.png" alt="CV">
+                <img class="icon" src="other/download.webp" alt="CV">
                 <span class="header-cv">Download CV</span>
             </a>
         </div>
@@ -82,7 +97,7 @@
                     </div>
                 </div>
                 <div id="about-right">
-                    <img id="about-photo" src="me.png" alt="Dan Pudig's Graduation Photo">
+                    <img id="about-photo" src="other/me.webp" alt="Dan Pudig's Graduation Photo" loading="lazy">
                 </div>
             </div>
         </section>
@@ -94,83 +109,83 @@
             </div>
             <div id="skills-row">
                 <div class="skill-box">
-                    <img class="skill" src="skills/html.png" alt="HTML">
+                    <img class="skill" src="skills/html.webp" alt="HTML" loading="lazy">
                     <p>HTML</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/css.png" alt="CSS">
+                    <img class="skill" src="skills/css.webp" alt="CSS" loading="lazy">
                     <p>CSS</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/javascript.png" alt="Javascript">
+                    <img class="skill" src="skills/javascript.webp" alt="Javascript" loading="lazy">
                     <p>Javascript</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/java.png" alt="Java">
+                    <img class="skill" src="skills/java.webp" alt="Java" loading="lazy">
                     <p>Java</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/python.png" alt="Python">
+                    <img class="skill" src="skills/python.webp" alt="Python" loading="lazy">
                     <p>Python</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/c.png" alt="C">
+                    <img class="skill" src="skills/c.webp" alt="C" loading="lazy">
                     <p>C</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/c++.png" alt="C++">
+                    <img class="skill" src="skills/c++.webp" alt="C++" loading="lazy">
                     <p>C++</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/c-sharp.png" alt="C#">
+                    <img class="skill" src="skills/c-sharp.webp" alt="C#" loading="lazy">
                     <p>C#</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/sql.png" alt="SQL">
+                    <img class="skill" src="skills/sql.webp" alt="SQL" loading="lazy">
                     <p>SQL</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/json.png" alt="JSON">
+                    <img class="skill" src="skills/json.webp" alt="JSON" loading="lazy">
                     <p>JSON</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/haskell.png" alt="Haskell">
+                    <img class="skill" src="skills/haskell.webp" alt="Haskell" loading="lazy">
                     <p>Haskell</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" id="gcp" src="skills/gcp.png" alt="GCP">
+                    <img class="skill" id="gcp" src="skills/gcp.webp" alt="GCP" loading="lazy">
                     <p>GCP</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/chatgpt.png" alt="ChatGPT">
+                    <img class="skill" src="skills/chatgpt.webp" alt="ChatGPT" loading="lazy">
                     <p>ChatGPT</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/llm.png" alt="Other LLMs">
+                    <img class="skill" src="skills/llm.webp" alt="Other LLMs" loading="lazy">
                     <p>Other LLMs</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/git.png" alt="Git">
+                    <img class="skill" src="skills/git.webp" alt="Git" loading="lazy">
                     <p>Git</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/jira.png" alt="Jira">
+                    <img class="skill" src="skills/jira.webp" alt="Jira" loading="lazy">
                     <p>Jira</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/data.png" alt="Data Structures">
+                    <img class="skill" src="skills/data.webp" alt="Data Structures" loading="lazy">
                     <p>Data Structures</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/algorithm.png" alt="Algorithms">
+                    <img class="skill" src="skills/algorithm.webp" alt="Algorithms" loading="lazy">
                     <p>Algorithms</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/agile.png" alt="Agile">
+                    <img class="skill" src="skills/agile.webp" alt="Agile" loading="lazy">
                     <p>Agile Methodology</p>
                 </div>
                 <div class="skill-box">
-                    <img class="skill" src="skills/documents.png" alt="Documentation">
+                    <img class="skill" src="skills/documents.webp" alt="Documentation" loading="lazy">
                     <p>Documentation</p>
                 </div>
             </div>
@@ -187,7 +202,7 @@
                 <h2 class="project-header">Professional Projects</h2>
                 <div class="projects-grid">
                     <div class="project-box" onclick="openModal('modal_tax')">
-                        <img src="projects/tax_calculator_0.png" alt="Project preview" class="project-image" />
+                        <img src="projects/tax_calculator_0.webp" alt="Project preview" class="project-image" loading="lazy">
                         <div class="project-content">
                             <h3>Tax Calculator</h3>
                             <p><strong>Click to learn more</strong></p>
@@ -201,7 +216,7 @@
                 <h2 class="project-header">Academic Projects</h2>
                 <div class="projects-grid">
                     <div class="project-box" onclick="openModal('modal_3900')">
-                        <img src="projects/metabolomics_0.png" alt="Project preview" class="project-image" />
+                        <img src="projects/metabolomics_0.webp" alt="Project preview" class="project-image" loading="lazy">
                         <div class="project-content">
                             <h3>Tear Film Metabolomics Website</h3>
                             <p><strong>Click to learn more</strong></p>
@@ -209,7 +224,7 @@
                     </div>
                     
                     <div class="project-box" onclick="openModal('modal_arcade')">
-                        <img src="projects/arcade_0.png" alt="Project preview" class="project-image" />
+                        <img src="projects/arcade_0.webp" alt="Project preview" class="project-image" loading="lazy">
                         <div class="project-content">
                             <h3>Arcade Game Collection</h3>
                             <p><strong>Click to learn more</strong></p>
@@ -223,7 +238,7 @@
                 <h2 class="project-header">Passion Projects</h2>
                 <div class="projects-grid">
                     <div class="project-box" onclick="openModal('modal_gog')">
-                        <img src="projects/gog_0.png" alt="Game of Games preview" class="project-image" />
+                        <img src="projects/gog_0.webp" alt="Game of Games preview" class="project-image" loading="lazy">
                         <div class="project-content">
                             <h3>Game of Games</h3>
                             <p><strong>Click to learn more</strong></p>
@@ -249,15 +264,15 @@
                                 <div class="info-title">Languages:</div>
                                 <div class="info-content">HTML, CSS, JavaScript, Python, SQL, JSON</div>
                             </div>
-                            <a href="https://github.com/dpudig-142857/COMP3900-Project.git" target="_blank" class="github-button">View on GitHub</a>
+                            <a href="https://github.com/dpudig-142857/COMP3900-Project.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                         <div class="modal-gallery">
                             <div class="gallery">
-                                <img id="metabolomicsImage" src="projects/metabolomics_0.png" alt="Metabolomics Screenshot" />
+                                <img id="metabolomicsImage" src="projects/metabolomics_0.webp" alt="Metabolomics Screenshot" loading="lazy">
                                 <div class="gallery-controls">
-                                    <button onclick="prevMetabolomics()">&#8592;</button>
+                                    <button onclick="metabolomicsCarousel.prev()">&#8592;</button>
                                     <span id="metabolomicsCounter">1 / 1</span>
-                                    <button onclick="nextMetabolomics()">&#8594;</button>
+                                    <button onclick="metabolomicsCarousel.next()">&#8594;</button>
                                 </div>
                             </div>
                         </div>
@@ -282,15 +297,15 @@
                                 <div class="info-title">Languages:</div>
                                 <div class="info-content"></div>
                             </div>
-                            <a href="https://github.com/dpudig-142857/Land-Tax-Planning-Tool.git" target="_blank" class="github-button">View on GitHub</a>
+                            <a href="https://github.com/dpudig-142857/Land-Tax-Planning-Tool.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                         <div class="modal-gallery">
                             <div class="gallery">
-                                <img id="taxImage" src="projects/tax_calculator_0.png" alt="Tax Calculator Screenshot" />
+                                <img id="taxImage" src="projects/tax_calculator_0.webp" alt="Tax Calculator Screenshot" loading="lazy">
                                 <div class="gallery-controls">
-                                    <button onclick="prevTax()">&#8592;</button>
+                                    <button onclick="taxCarousel.prev()">&#8592;</button>
                                     <span id="taxCounter">1 / 1</span>
-                                    <button onclick="nextTax()">&#8594;</button>
+                                    <button onclick="taxCarousel.next()">&#8594;</button>
                                 </div>
                             </div>
                         </div>
@@ -313,15 +328,15 @@
                                 <div class="info-title">Languages:</div>
                                 <div class="info-content">Java</div>
                             </div>
-                            <a href="https://github.com/dpudig-142857/Arcade.git" target="_blank" class="github-button">View on GitHub</a>
+                            <a href="https://github.com/dpudig-142857/Arcade.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                         <div class="modal-gallery">
                             <div class="gallery">
-                                <img id="arcadeImage" src="projects/arcade_0.png" alt="Arcade Screenshot" />
+                                <img id="arcadeImage" src="projects/arcade_0.webp" alt="Arcade Screenshot" loading="lazy">
                                 <div class="gallery-controls">
-                                    <button onclick="prevArcade()">&#8592;</button>
+                                    <button onclick="arcadeCarousel.prev()">&#8592;</button>
                                     <span id="arcadeCounter">1 / 6</span>
-                                    <button onclick="nextArcade()">&#8594;</button>
+                                    <button onclick="arcadeCarousel.next()">&#8594;</button>
                                 </div>
                             </div>
                         </div>
@@ -346,15 +361,15 @@
                                 <div class="info-title">Languages:</div>
                                 <div class="info-content">HTML, CSS, Javascript, JSON</div>
                             </div>
-                            <a href="https://github.com/dpudig-142857/Game-of-Games.git" target="_blank" class="github-button">View on GitHub</a>
+                            <a href="https://github.com/dpudig-142857/Game-of-Games.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                         <div class="modal-gallery">
                             <div class="gallery">
-                                <img id="gogImage" src="projects/gog_0.png" alt="Game of Games Screenshot" />
+                                <img id="gogImage" src="projects/gog_0.webp" alt="Game of Games Screenshot" loading="lazy">
                                 <div class="gallery-controls">
-                                    <button onclick="prevGoG()">&#8592;</button>
+                                    <button onclick="gogCarousel.prev()">&#8592;</button>
                                     <span id="gogCounter">1 / 1</span>
-                                    <button onclick="nextGoG()">&#8594;</button>
+                                    <button onclick="gogCarousel.next()">&#8594;</button>
                                 </div>
                             </div>
                         </div>
@@ -392,27 +407,25 @@
     <footer>
         <div class="footer-links">
             <div id="footer-link">
-                <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub">
-                    <img class="icon" src="github.svg" alt="GitHub">
+                <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                    <img class="icon" src="other/github.webp" alt="GitHub" loading="lazy">
                     <span class="footer-box">Go to GitHub</span>
                 </a>
             </div>
             <div id="footer-link">
-                <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn">
-                    <img class="icon" src="linkedin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                    <img class="icon" src="other/linkedin.webp" alt="LinkedIn" loading="lazy">
                     <span class="footer-box">Go to LinkedIn</span>
                 </a>
             </div>
             <div id="footer-link">
                 <a href="Dan Pudig's CV.pdf" download>
-                    <img class="icon" src="download.png" alt="CV">
+                    <img class="icon" src="other/download.webp" alt="CV" loading="lazy">
                     <span class="footer-box">Download CV</span>
                 </a>
             </div>
         </div>
         <p>© 2025 Dan Pudig</p>
     </footer>
-
-    <script src="index.js"></script>
 </body>
 </html>
