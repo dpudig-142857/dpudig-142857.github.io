@@ -241,7 +241,7 @@ nav.navbar a:hover {
 #about-description-box {
     background-color: #FF4D1A;
     border: 0.5rem solid black;
-    width: max-content;
+    width: 95%;
     padding: 0.75rem;
     text-align: center;
     font-weight: bold;
@@ -258,7 +258,6 @@ nav.navbar a:hover {
 #about-description {
     font-size: 1rem;
     line-height: 1.5;
-    max-width: 500px;
 }
 
 /*#about-right {
