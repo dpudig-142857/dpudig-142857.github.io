@@ -39,6 +39,8 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 0.75rem;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 #logo-section {
