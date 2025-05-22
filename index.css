@@ -484,6 +484,8 @@ nav.navbar a:hover {
     border-radius: 1.5rem;
     width: 90%;
     max-width: 75rem;
+    max-height: 80vh;
+    overflow-y: auto;
     border: 0.25rem solid #ff4c4c;
     box-shadow:
         0 1rem 2rem rgba(0, 0, 0, 0.5),
