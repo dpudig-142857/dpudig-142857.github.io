@@ -1,9 +1,16 @@
 document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
-        if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
     });
 });
 
@@ -56,31 +63,31 @@ window.onclick = function(event) {
 
 const arcadeCarousel = createCarousel({
     images: [
-        'projects/arcade_0.webp',
-        'projects/arcade_1.webp',
-        'projects/arcade_2.webp',
-        'projects/arcade_3.webp',
-        'projects/arcade_4.webp',
-        'projects/arcade_5.webp'
+        'images/projects/arcade_0.webp',
+        'images/projects/arcade_1.webp',
+        'images/projects/arcade_2.webp',
+        'images/projects/arcade_3.webp',
+        'images/projects/arcade_4.webp',
+        'images/projects/arcade_5.webp'
     ],
     imageId: 'arcadeImage',
     counterId: 'arcadeCounter'
 });
 
 const taxCarousel = createCarousel({
-    images: ['projects/tax_calculator_0.webp'],
+    images: ['images/projects/tax_calculator_0.webp'],
     imageId: 'taxImage',
     counterId: 'taxCounter'
 });
 
 const metabolomicsCarousel = createCarousel({
-    images: ['projects/metabolomics_0.webp'],
+    images: ['images/projects/metabolomics_0.webp'],
     imageId: 'metabolomicsImage',
     counterId: 'metabolomicsCounter'
 });
 
 const gogCarousel = createCarousel({
-    images: ['projects/gog_0.webp'],
+    images: ['images/projects/gog_0.webp'],
     imageId: 'gogImage',
     counterId: 'gogCounter'
 });

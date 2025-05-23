@@ -120,7 +120,7 @@ nav.navbar a:hover {
 /*                               Hero section                              */
 
 .hero {
-    background-image: url('other/trees.webp');
+    background-image: url('images/trees.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
