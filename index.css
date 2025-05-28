@@ -1,9 +1,17 @@
 :root {
     font-size: 13px;
+    --section1: #FF5E3A;
+    --section2: #FF2A00;
+    --section3: #FF7000;
+    --section4: #FFB400;
+    --section5: #FFD700;
 }
 
 * {
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html {
@@ -52,6 +60,32 @@ header {
 #logo {
     width: clamp(1rem, 8vw, 2.7rem);
     height: auto;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+.header-dino {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 2.188rem;
+    left: 0;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#logo:hover .header-dino {
+    visibility: visible;
+    opacity: 1;
 }
 
 nav.navbar {
@@ -203,7 +237,7 @@ nav.navbar a:hover {
 /*                               About section                             */
 
 #about {
-    background-color: #FF5E3A;
+    background-color: var(--section1);
     padding: 1.25rem 2.5rem 3.75rem;
     height: max-content;
 }
@@ -302,7 +336,7 @@ nav.navbar a:hover {
 /*                              Skills section                             */
 
 #skills {
-    background-color: #FF2A00;
+    background-color: var(--section2);
     padding: 1.25rem 2.5rem 3.75rem;
 }
 
@@ -362,10 +396,77 @@ nav.navbar a:hover {
 
 
 /* ----------------------------------------------------------------------- */
+/*                          Certifications section                         */
+
+#certifications {
+    background-color: var(--section3);
+    padding: 1.25rem 2.5rem 3.75rem;
+}
+
+#certifications-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3vw 4vw;
+    padding: 2rem 4vw;
+}
+
+.cert-box {
+    width: clamp(12rem, 20vw, 15rem);
+    background-color: #FFA500;
+    border: 0.1rem solid black;
+    border-radius: 10%;
+    box-shadow:
+        0 0.3rem 0.6rem rgba(0, 0, 0, 0.6),
+        0 0.2rem 0.4rem rgba(0, 0, 0, 0.4),
+        0 0 0.5rem rgba(255, 133, 0, 0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.2rem 1rem;
+    font-weight: bold;
+    font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.cert-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow:
+        0 1.25rem 2.5rem rgba(0, 0, 0, 0.65),
+        0 0.75rem 1.125rem rgba(0, 0, 0, 0.45),
+        0 0 1.75rem rgba(255, 133, 0, 0.9);
+}
+
+.cert-box h3 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+}
+
+.cert-title {
+    font-weight: 600;
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    margin: 0.3rem 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.cert-detail {
+    margin: 0 0 0.6rem 0;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+
+/* ----------------------------------------------------------------------- */
 /*                             Projects section                            */
 
 #projects {
-    background-color: #FFB400;
+    background-color: var(--section4);
     padding: 1.25rem 2.5rem 3.75rem;
 }
 
@@ -601,7 +702,7 @@ nav.navbar a:hover {
 /*                             Contact section                             */
 
 #contact {
-    background-color: #FFD700;
+    background-color: var(--section5);
     text-align: center;
     padding: 1.25rem 2.5rem;
     min-height: 81.5vh;
@@ -663,7 +764,7 @@ nav.navbar a:hover {
 .contact-form textarea {
     width: 100%;
     padding: 0.625rem;
-    border: 0.125rem solid #FF2A00;
+    border: 0.125rem solid var(--section2);
     border-radius: 0.375rem;
     font-size: 1rem;
     background-color: #fff;
@@ -681,7 +782,7 @@ nav.navbar a:hover {
     margin-top: 1.563rem;
     padding: 0.75rem;
     font-size: 1rem;
-    background-color: #FF2A00;
+    background-color: var(--section2);
     color: white;
     border: none;
     border-radius: 0.375rem;
