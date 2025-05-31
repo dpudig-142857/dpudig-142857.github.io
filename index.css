@@ -396,27 +396,27 @@ nav.navbar a:hover {
 
 
 /* ----------------------------------------------------------------------- */
-/*                          Certifications section                         */
+/*                          Qualifications section                         */
 
-#certifications {
+#qualifications {
     background-color: var(--section3);
     padding: 1.25rem 2.5rem 3.75rem;
 }
 
-#certifications-row {
+.qualifications-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 3vw 4vw;
-    padding: 2rem 4vw;
+    gap: 3vw 5vw;
+    padding: 1rem 4vw;
 }
 
-.cert-box {
-    width: clamp(12rem, 20vw, 15rem);
+.qual-box {
+    width: clamp(16rem, 28vw, 22rem);
     background-color: #FFA500;
     border: 0.1rem solid black;
-    border-radius: 10%;
+    border-radius: 2.308rem;
     box-shadow:
         0 0.3rem 0.6rem rgba(0, 0, 0, 0.6),
         0 0.2rem 0.4rem rgba(0, 0, 0, 0.4),
@@ -426,40 +426,69 @@ nav.navbar a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1.2rem 1rem;
+    padding: 2.5rem 1.2rem 1.5rem;
     font-weight: bold;
-    font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
     color: #1a1a1a;
     text-align: center;
+    position: relative;
 }
 
-.cert-box:hover {
-    transform: translateY(-0.5rem);
+.qual-box:hover {
     box-shadow:
         0 1.25rem 2.5rem rgba(0, 0, 0, 0.65),
         0 0.75rem 1.125rem rgba(0, 0, 0, 0.45),
         0 0 1.75rem rgba(255, 133, 0, 0.9);
 }
 
-.cert-box h3 {
-    margin: 0 0 1rem;
-    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+.qual-box.certification {
+    background-color: #ffb733;
 }
 
-.cert-title {
-    font-weight: 600;
-    font-size: clamp(0.7rem, 1vw, 0.85rem);
-    margin: 0.3rem 0 0 0;
+.qual-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0.4rem 0;
+    border-radius: 2.308rem 2.308rem 0 0;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    margin: 0;
+    font-size: 0.75rem;
 }
 
-.cert-detail {
-    margin: 0 0 0.6rem 0;
+.qual-header {
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
     font-weight: 700;
-    color: #1a1a1a;
-    line-height: 1.2;
+    margin: 0.8rem 0;
+    line-height: 1.4;
+    color: #111;
+    letter-spacing: 0.02em;
+    min-height: 2.5rem;
 }
+
+.qual-box.certification .qual-header {
+    min-height: 4.5rem;
+}
+
+.qual-grid-row {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1rem;
+    align-items: baseline;
+    margin-bottom: 0.4rem;
+}
+
+.qual-detail {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    text-align: right;
+}
+
 
 
 /* ----------------------------------------------------------------------- */
