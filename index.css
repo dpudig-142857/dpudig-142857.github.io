@@ -406,7 +406,7 @@ nav.navbar a:hover {
 .qual {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .qual-row {
@@ -414,7 +414,7 @@ nav.navbar a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 2rem 4vw;
+    gap: 2rem 3vw;
     padding: 1vw 4vw 2vw;
 }
 
@@ -449,6 +449,10 @@ nav.navbar a:hover {
 
 .qual-box.cert {
     background-color: #ffb733;
+}
+
+.qual-box.accred {
+    background-color: #FFD966;
 }
 
 .qual-type {
