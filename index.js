@@ -26,11 +26,119 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+function startChaosShake(el) {
+    el.classList.remove('chaos-shake', 'chaos-decaying');
+    el.style.animation = 'none'; // ensure we control transform manually from here
+    el._chaosStart = performance.now();
+    el._chaosDecayUntil = null; // set later when cooldown begins
+
+    function frame(now) {
+        if (!el._chaosRunning) return;
+
+        const elapsed = now - el._chaosStart;
+        let amplitude = 1;
+
+        if (el._chaosDecayUntil) {
+            const decayElapsed = now - el._chaosDecayStart;
+            const decayDuration = el._chaosDecayUntil - el._chaosDecayStart;
+            amplitude = Math.max(0, 1 - decayElapsed / decayDuration);
+            if (amplitude <= 0) {
+                el.style.transform = '';
+                el._chaosRunning = false;
+                return;
+            }
+        }
+
+        const phase = (elapsed / 500) * 2 * Math.PI; // matches original ~0.5s cycle speed
+        const rotate = Math.sin(phase) * 8 * amplitude;
+        const tx = Math.sin(phase + 1) * 0.4 * amplitude;
+        const ty = Math.cos(phase + 1) * 0.4 * amplitude;
+        const scale = 1 + Math.sin(phase) * 0.03 * amplitude;
+
+        el.style.transform = `rotate(${rotate}deg) translate(${tx}rem, ${ty}rem) scale(${scale})`;
+        requestAnimationFrame(frame);
+    }
+
+    el._chaosRunning = true;
+    requestAnimationFrame(frame);
+}
+
+function beginShakeDecay(targets, decayDuration) {
+    const decayStart = performance.now();
+
+    // switch from CSS keyframe animation to manual jittery control
+    targets.forEach(el => {
+        el.classList.remove('chaos-shake');
+        el.style.animation = 'none';
+    });
+
+    function jitterStep() {
+        const elapsed = performance.now() - decayStart;
+        const amplitude = Math.max(0, 1 - elapsed / decayDuration);
+
+        if (amplitude <= 0) {
+            targets.forEach(el => { el.style.transform = ''; });
+            return;
+        }
+
+        targets.forEach(el => {
+            const rotate = (Math.random() * 16 - 8) * amplitude;
+            const tx = (Math.random() * 0.8 - 0.4) * amplitude;
+            const ty = (Math.random() * 0.8 - 0.4) * amplitude;
+            const scale = 1 + (Math.random() * 0.06 - 0.03) * amplitude;
+            el.style.transform = `rotate(${rotate}deg) translate(${tx}rem, ${ty}rem) scale(${scale})`;
+        });
+
+        setTimeout(jitterStep, 150); // roughly matches your original keyframe beat
+    }
+
+    jitterStep();
+}
+
+let hueAnimId = null;
+let hueDecayUntil = null;
+let hueDecayStart = null;
+let hueStartTime = null;
+
+function startHuePulse(wrapper) {
+    hueStartTime = performance.now();
+    hueDecayUntil = null;
+
+    function frame(now) {
+        const elapsed = now - hueStartTime;
+        let amplitude = 1;
+
+        if (hueDecayUntil) {
+            const decayElapsed = now - hueDecayStart;
+            const decayDuration = hueDecayUntil - hueDecayStart;
+            amplitude = Math.max(0, 1 - decayElapsed / decayDuration);
+        }
+
+        const hue = ((elapsed / 1500) * 360) % 360;
+        // Blend toward 0 as amplitude shrinks, so it eases back to normal color smoothly
+        wrapper.style.filter = `hue-rotate(${hue * amplitude}deg)`;
+
+        if (amplitude <= 0) {
+            wrapper.style.filter = '';
+            return;
+        }
+        hueAnimId = requestAnimationFrame(frame);
+    }
+
+    hueAnimId = requestAnimationFrame(frame);
+}
+
+function beginHueDecay(decayDuration) {
+    hueDecayStart = performance.now();
+    hueDecayUntil = hueDecayStart + decayDuration;
+}
+
 function triggerChaosMode() {
     if (chaosActive) return;
     chaosActive = true;
-    
-    document.getElementById('page-wrapper').classList.add('chaos-pulse');
+
+    const wrapper = document.getElementById('page-wrapper');
+    startHuePulse(wrapper); // keep the smooth hue decay from before, that one felt fine
 
     const banner = document.createElement('div');
     banner.className = 'chaos-banner shake';
@@ -38,83 +146,60 @@ function triggerChaosMode() {
     document.body.appendChild(banner);
 
     document.title = 'CHAOS MODE';
-    
-    //const targets = document.querySelector('.skill-box, .qual-box, .project-box, .about-box');
+
     const targets = document.querySelectorAll('.shake');
     targets.forEach(el => {
+        el.style.animation = ''; // ensure CSS keyframe animation is active (in case a prior run left it overridden)
         el.style.animationDelay = `${Math.random() * 0.3}s`;
         el.classList.add('chaos-shake');
     });
-    
-    // falling dino emoji rain
-    const emojiInterval = setInterval(() => {
-        const emoji = document.createElement('div');
-        emoji.className = 'chaos-emoji';
-        emoji.innerHTML = '<img src="images/favicon.ico" alt="">';
-        emoji.style.left = `${Math.random() * 100}vw`;
-        const duration = 2 + Math.random() * 2;
-        emoji.style.animationDuration = `${duration}s`;
-        document.body.appendChild(emoji);
-        setTimeout(() => emoji.remove(), duration * 1000);
-    }, 120);
-    
-    setTimeout(() => {
-        clearInterval(emojiInterval);
-        document.getElementById('page-wrapper').classList.remove('chaos-pulse');
-        targets.forEach(el => {
-            el.classList.remove('chaos-shake');
-            el.style.animationDelay = '';
-        });
-        banner.style.animation = 'bannerPop 0.3s ease-in reverse';
-        document.title = `Dan Pudig's Portfolio Website`;
-        setTimeout(() => banner.remove(), 300);
-        chaosActive = false;
-    }, 10000); // chaos lasts 10 seconds
-}
 
-/*const konamiCode = ['d', 'a', 'n'];
-//const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-let konamiIndex = 0;
-let chaosActive = false;
-
-document.addEventListener('keydown', (e) => {
-    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
-    if (key === konamiCode[konamiIndex]) {
-        konamiIndex++;
-        if (konamiIndex === konamiCode.length) {
-            triggerChaosMode();
-            konamiIndex = 0;
-        }
-    } else {
-        konamiIndex = key === konamiCode[0] ? 1 : 0;
+    let emojiRate = 120;
+    let emojiTimer;
+    function scheduleEmoji() {
+        emojiTimer = setTimeout(() => {
+            const emoji = document.createElement('div');
+            emoji.className = 'chaos-emoji';
+            emoji.innerHTML = '<img src="images/favicon.ico" alt="">';
+            emoji.style.left = `${Math.random() * 100}vw`;
+            const duration = 2 + Math.random() * 2;
+            emoji.style.animationDuration = `${duration}s`;
+            document.body.appendChild(emoji);
+            setTimeout(() => emoji.remove(), duration * 1000);
+            scheduleEmoji();
+        }, emojiRate);
     }
-});
+    scheduleEmoji();
 
-function triggerChaosMode() {
-    if (chaosActive) return; // prevent re-trigger while already running
-    chaosActive = true;
-
-    const banner = document.createElement('div');
-    banner.className = 'chaos-banner';
-    banner.textContent = '🦖 CHAOS MODE ACTIVATED 🦖';
-    document.body.appendChild(banner);
-
-    const targets = document.querySelectorAll('.skill-box, .qual-box, .project-box, .about-box');
-    targets.forEach(el => {
-        el.style.animationDelay = `${Math.random() * 0.3}s`;
-        el.classList.add('chaos-shake');
-    });
+    const totalDuration = 10000;
+    const decayLength = 2500;
 
     setTimeout(() => {
-        targets.forEach(el => {
-            el.classList.remove('chaos-shake');
-            el.style.animationDelay = '';
-        });
-        banner.style.animation = 'bannerPop 0.3s ease-in reverse';
-        setTimeout(() => banner.remove(), 300);
+        beginHueDecay(decayLength);
+        beginShakeDecay(targets, decayLength); // full-amplitude jitter, shrinking down to still
+
+        const decayStart = performance.now();
+        function slowEmoji() {
+            const elapsed = performance.now() - decayStart;
+            if (elapsed >= decayLength) {
+                clearTimeout(emojiTimer);
+                return;
+            }
+            emojiRate = 120 + (elapsed / decayLength) * 600;
+            requestAnimationFrame(slowEmoji);
+        }
+        slowEmoji();
+
+        banner.style.animation = 'bannerPop 0.6s ease-in reverse';
+        setTimeout(() => banner.remove(), 600);
+    }, totalDuration - decayLength);
+
+    setTimeout(() => {
+        clearTimeout(emojiTimer);
+        document.title = `Dan Pudig's Portfolio Website`;
         chaosActive = false;
-    }, 10000); // chaos lasts 10 seconds
-}*/
+    }, totalDuration);
+}
 
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', function (e) {

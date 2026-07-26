@@ -994,7 +994,14 @@ footer {
     animation: chaosShake 0.5s ease-in-out infinite;
 }
 
-.skill-box.chaos-shake {
+.chaos-settle {
+    animation: none;
+    transition: transform 0.6s ease-out;
+    transform: rotate(0deg) translate(0, 0) scale(1);
+}
+
+.skill-box.chaos-shake,
+.skill-box.chaos-settle {
     overflow: visible;
 }
 
@@ -1008,6 +1015,12 @@ footer {
 
 #page-wrapper.chaos-pulse {
     animation: huePulse 1.5s linear infinite;
+}
+
+#page-wrapper.chaos-fade-out {
+    animation: none;
+    transition: filter 1.5s ease-out;
+    filter: hue-rotate(0deg);
 }
 
 @keyframes huePulse {
@@ -1059,36 +1072,3 @@ footer {
         transform: rotate(720deg);
     }
 }
-
-/*.chaos-shake {
-    animation: chaosShake 0.6s ease-in-out infinite;
-}
-
-@keyframes chaosShake {
-    0%, 100% { transform: rotate(0deg) translate(0, 0); }
-    20% { transform: rotate(-6deg) translate(-0.3rem, 0.2rem); }
-    40% { transform: rotate(5deg) translate(0.3rem, -0.2rem); }
-    60% { transform: rotate(-4deg) translate(-0.2rem, 0.3rem); }
-    80% { transform: rotate(6deg) translate(0.2rem, -0.3rem); }
-}
-
-.chaos-banner {
-    position: fixed;
-    top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #000;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 2rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    z-index: 1200;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
-    animation: bannerPop 0.4s ease-out;
-}
-
-@keyframes bannerPop {
-    from { opacity: 0; transform: translateX(-50%) translateY(-1rem) scale(0.8); }
-    to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
-}*/
