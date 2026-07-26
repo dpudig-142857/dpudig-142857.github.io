@@ -1,0 +1,1890 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM67FFCGHR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GM67FFCGHR');
+    </script>
+    
+    <!-- Import CSS and Javascript files -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+    <!--<link rel="stylesheet" href="index.mini.css">
+    <script src="index.mini.js" defer></script>-->
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+
+    <!-- Google SEO tags -->
+    <link rel="canonical" href="https://dan.pudig.com/" />
+    <meta name="google-site-verification" content="UEtIFArGpTb2gnlArzCYbbLfLbA4ogH83EMpKonsosg" />
+    <meta name="description" content="Dan Pudig - a frontend web developer showcasing creative projects, portfolio work, and resume. Detail-oriented and always learning.">
+    
+    <!-- Loading trees image and dino icon for favicon -->
+    <link rel="preload" href="images/trees.webp" as="image">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- These tags control how the site looks when shared on Twitter/X. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dan Pudig's Portfolio">
+    <meta name="twitter:description" content="Explore my projects, skills, and resume.">
+    <meta name="twitter:image" content="https://dan.pudig.com/images/front_page.webp">
+
+    <!-- Basic HTML tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Pudig's Portfolio Website</title>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dan Pudig",
+        "url": "https://dan.pudig.com",
+        "sameAs": [
+            "https://github.com/dpudig-142857",
+            "https://www.linkedin.com/in/dan-pudig-b536b32b5/"
+        ],
+        "jobTitle": "Frontend Web Developer"
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <div id="logo-section">
+            <img id="logo" src="images/dino.webp" alt="Logo">
+            <span class="header-dino">
+                <a target="_blank" href="https://icons8.com/icon/9241/dinosaur">dino</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </span>
+        </div>
+        <nav class="navbar">
+            <a data-target="home" href="#home">Home</a>
+            <a data-target="about" href="#about">About</a>
+            <a data-target="skills" href="#skills">Skills</a>
+            <a data-target="qualifications" href="#qualifications">Qualifications</a>
+            <a data-target="projects" href="#projects">Projects</a>
+            <a data-target="contact" href="#contact">Contact</a>
+        </nav>
+        <div id="header-download">
+            <a href="Dan Pudig's CV.pdf" download>
+                <img class="icon" src="images/cv.webp" alt="CV">
+                <span class="header-cv">Download CV</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1 id="hero-name">Dan Pudig</h1>
+                    <!--
+                    <p id="hero-job">Junior Data Analyst at Seven West Media</p>
+                    <p id="hero-tag">Solving problems, one semicolon at a time</p>
+                    -->
+                    <p id="hero-tag"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <div class="section-divider">
+                <div class="section-header">ABOUT</div>
+            </div>
+            <div id="about-section">
+                <div id="about-left">
+                    <img id="about-photo" src="images/me.webp" alt="Dan Pudig's Graduation Photo" loading="lazy">
+                    <div id="about-description-box">
+                        <p id="about-description">
+                            Hi, I'm Dan Pudig, a Junior Data Analyst at Channel Seven with a strong foundation in frontend web development. I enjoy turning data into clear, actionable insights, and building clean, user-friendly tools to bring that data to life - this portfolio site being one example. My background spans data analysis, SQL, Python, and web development, and I'm always looking to grow across both disciplines. When I'm not working with data or code, I enjoy strategy games and experimenting with creative design ideas.
+                        </p>
+                    </div>
+                </div>
+                <div id="about-right">
+                    <div id="about-row">
+                        <div class="about-box">
+                            <p>REDiQ - Sales Insight Tool @ Channel Seven</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Data Analysis @ Channel Seven</p>
+                        </div>
+                        <div class="about-box">
+                            <p>UNSW Graduate</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Computer Science & Maths Major</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Tax Calculator & AI Chatbots @ Cartland Law</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Educational Tech Testing @ 3P Learning</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Clean & Efficient Problem Solver</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Scalable & User Friendly Software</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Always Learning & Growing</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Team Player & Collaborator</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Gamer & Game Designer</p>
+                        </div>
+                        <div class="about-box">
+                            <p>Singer, Drummer & Trumpeter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <div class="section-divider">
+                <div class="section-header">SKILLS</div>
+            </div>
+            <div id="skills-row">
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/databricks.webp" alt="Databricks" loading="lazy">
+                    </div>
+                    <p>Databricks</p>
+                </div>
+                <div class="skill-box" data-level="80">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/tableau.webp" alt="Tableau" loading="lazy">
+                    </div>
+                    <p>Tableau</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/sql.webp" alt="SQL" loading="lazy">
+                    </div>
+                    <p>SQL</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/python.webp" alt="Python" loading="lazy">
+                    </div>
+                    <p>Python</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/html.webp" alt="HTML" loading="lazy">
+                    </div>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/css.webp" alt="CSS" loading="lazy">
+                    </div>
+                    <p>CSS</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/javascript.webp" alt="Javascript" loading="lazy">
+                    </div>
+                    <p>Javascript</p>
+                </div>
+                <div class="skill-box" data-level="75">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/java.webp" alt="Java" loading="lazy">
+                    </div>
+                    <p>Java</p>
+                </div>
+                <div class="skill-box" data-level="65">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/c.webp" alt="C" loading="lazy">
+                    </div>
+                    <p>C</p>
+                </div>
+                <div class="skill-box" data-level="65">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/c++.webp" alt="C++" loading="lazy">
+                    </div>
+                    <p>C++</p>
+                </div>
+                <div class="skill-box" data-level="65">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/c-sharp.webp" alt="C#" loading="lazy">
+                    </div>
+                    <p>C#</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/json.webp" alt="JSON" loading="lazy">
+                    </div>
+                    <p>JSON</p>
+                </div>
+                <div class="skill-box" data-level="60">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/haskell.webp" alt="Haskell" loading="lazy">
+                    </div>
+                    <p>Haskell</p>
+                </div>
+                <div class="skill-box" data-level="70">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" id="gcp" src="images/skills/gcp.webp" alt="GCP" loading="lazy">
+                    </div>
+                    <p>GCP</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/chatgpt.webp" alt="ChatGPT" loading="lazy">
+                    </div>
+                    <p>ChatGPT</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/claude.webp" alt="Claude" loading="lazy">
+                    </div>
+                    <p>Claude</p>
+                </div>
+                <div class="skill-box" data-level="80">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/llm.webp" alt="Other LLMs" loading="lazy">
+                    </div>
+                    <p>Other LLMs</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/git.webp" alt="Git" loading="lazy">
+                    </div>
+                    <p>Git</p>
+                </div>
+                <div class="skill-box" data-level="80">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/jira.webp" alt="Jira" loading="lazy">
+                    </div>
+                    <p>Jira</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/data.webp" alt="Data Structures" loading="lazy">
+                    </div>
+                    <p>Data Structures</p>
+                </div>
+                <div class="skill-box" data-level="90">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/algorithm.webp" alt="Algorithms" loading="lazy">
+                    </div>
+                    <p>Algorithms</p>
+                </div>
+                <div class="skill-box" data-level="85">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/agile.webp" alt="Agile" loading="lazy">
+                    </div>
+                    <p>Agile Methodology</p>
+                </div>
+                <div class="skill-box" data-level="80">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/documents.webp" alt="Documentation" loading="lazy">
+                    </div>
+                    <p>Documentation</p>
+                </div>
+                <div class="skill-box" data-level="100">
+                    <div class="skill-ring">
+                        <svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="45"></circle><circle class="ring-fill" cx="50" cy="50" r="45"></circle></svg>
+                        <img class="skill" src="images/skills/gamer.webp" alt="Gamer" loading="lazy">
+                    </div>
+                    <p>Competitive Gamer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALIFICATIONS SECTION -->
+        <section id="qualifications">
+            <div class="section-divider">
+                <div class="section-header">QUALIFICATIONS</div>
+            </div>
+            <div class="qual">
+                <div class="qual-box">
+                    <p class="qual-type">Degree</p>
+                    <h3 class="qual-header">Bachelor of Science<br><span class="qual-major">in Computer Science</span></h3>
+                    <span class="qual-text">UNSW | Awarded March 2025</span>
+                </div>
+
+                <div class="qual-box">
+                    <p class="qual-type">Degree</p>
+                    <h3 class="qual-header">Bachelor of Science<br><span class="qual-major">in Mathematics</span></h3>
+                    <span class="qual-text">UNSW | Awarded March 2025</span>
+                </div>
+
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">Databricks Data<br>Analyst Associate</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">Databricks Data<br>Engineer Associate</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+    
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">Responsive<br>Web Design</h3>
+                    <span class="qual-text">freeCodeCamp | Awarded May 2025</span>
+                </div>
+
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">JS Algorithms &<br>Data Structures</h3>
+                    <span class="qual-text">freeCodeCamp | Awarded May 2025</span>
+                </div>
+
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">Front End<br>Dev Libraries</h3>
+                    <span class="qual-text">freeCodeCamp | Awarded June 2025</span>
+                </div>
+
+                <div class="qual-box cert">
+                    <p class="qual-type">Certification</p>
+                    <h3 class="qual-header">Relational<br>Database</h3>
+                    <span class="qual-text">freeCodeCamp | Awarded June 2025</span>
+                </div>
+
+                <div class="qual-box accred">
+                    <p class="qual-type">Accreditation</p>
+                    <h3 class="qual-header">Databricks<br>Fundamentals</h3>
+                    <span class="qual-text">Databricks | Awarded June 2025</span>
+                </div>
+
+                <div class="qual-box accred">
+                    <p class="qual-type">Knowledge Badge</p>
+                    <h3 class="qual-header">Data Ingestion w/<br>Lakeflow Connect</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+
+                <div class="qual-box accred">
+                    <p class="qual-type">Knowledge Badge</p>
+                    <h3 class="qual-header">Deploy Workloads<br>w/ Lakeflow Jobs</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+
+                <div class="qual-box accred">
+                    <p class="qual-type">Knowledge Badge</p>
+                    <h3 class="qual-header">Build Data Pipelines<br>w/ Lakeflow Spark<br>Declarative Pipelines</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+
+                <div class="qual-box accred">
+                    <p class="qual-type">Knowledge Badge</p>
+                    <h3 class="qual-header">DevOps Essentials<br>for Data Engineering</h3>
+                    <span class="qual-text">Databricks Academy | Awarded July 2026</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <div class="section-divider">
+                <div class="section-header">PROJECTS</div>
+            </div>
+
+            <!-- Professional Projects -->
+            <div class="project-section">
+                <h2 class="project-header">Professional Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-box" onclick="openModal('modal_tax')">
+                        <img src="images/projects/tax_calculator_0.webp" alt="Project preview" class="project-image" loading="lazy">
+                        <div class="project-content">
+                            <h3>Tax Calculator</h3>
+                            <p><strong>Click to learn more</strong></p>
+                        </div>
+                    </div>
+                    <div class="project-box" onclick="openModal('rediq')">
+                        <img src="images/projects/rediq_0.webp" alt="Project preview" class="project-image" loading="lazy">
+                        <div class="project-content">
+                            <h3>REDiQ</h3>
+                            <p><strong>Click to learn more</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Projects -->
+            <div class="project-section">
+                <h2 class="project-header">Academic Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-box" onclick="openModal('modal_3900')">
+                        <img src="images/projects/metabolomics_0.webp" alt="Project preview" class="project-image" loading="lazy">
+                        <div class="project-content">
+                            <h3>Tear Film Metabolomics Website</h3>
+                            <p><strong>Click to learn more</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-box" onclick="openModal('modal_arcade')">
+                        <img src="images/projects/arcade_0.webp" alt="Project preview" class="project-image" loading="lazy">
+                        <div class="project-content">
+                            <h3>Arcade Game Collection</h3>
+                            <p><strong>Click to learn more</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passion Projects -->
+            <div class="project-section">
+                <h2 class="project-header">Passion Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-box" onclick="openModal('modal_gog')">
+                        <img src="images/projects/gog_0.webp" alt="Game of Games preview" class="project-image" loading="lazy">
+                        <div class="project-content">
+                            <h3>Game of Games</h3>
+                            <p><strong>Click to learn more</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMP3900 Project Modal -->
+            <div id="modal_3900" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_3900')">&times;</span>
+                    <h2 class="modal-title">What is hidden in the metabolomics of the tear film of the eye?</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">As part of my COMP3900 Capstone Project, I worked with a team of six to build a web-based visualization tool designed for optometrists. The tool helps users explore how different metabolites, compounds, and biological pathways are connected in the tear film of the eye - useful for both research and clinical insights.</div>
+                                <br>
+                                <div class="info-content">I was responsible for the UX/UI design and took on the role of SCRUM master, coordinating development and keeping the project running smoothly across sprints.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">HTML, CSS, JavaScript, Python, SQL, JSON</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/COMP3900-Project.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="metabolomicsImage" src="images/projects/metabolomics_0.webp" alt="Metabolomics Screenshot" loading="lazy">
+                                <div class="gallery-controls">
+                                    <button onclick="metabolomicsCarousel.prev()">&#8592;</button>
+                                    <span id="metabolomicsCounter">1 / 1</span>
+                                    <button onclick="metabolomicsCarousel.next()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tax Calculator Modal -->
+            <div id="modal_tax" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_tax')">&times;</span>
+                    <h2 class="modal-title">Tax Calculator (Land Tax Planning Tool)</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">I developed a custom tax calculator as a simple web-based tool for Cartland Law, designed to streamline property tax calculations. Users can enter landholder details, property addresses, land values, and ownership percentages, and the calculator automatically distributes tax obligations accordingly.</div>
+                                <br>
+                                <div class="info-content">This was one of the first websites I ever built. At the time, I was just learning HTML and CSS, so the design is minimal and functional. While basic in appearance, the tool serves its purpose effectively and gave me valuable early experience working on real-world problems for a client.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content"></div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Land-Tax-Planning-Tool.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="taxImage" src="images/projects/tax_calculator_0.webp" alt="Tax Calculator Screenshot" loading="lazy">
+                                <div class="gallery-controls">
+                                    <button onclick="taxCarousel.prev()">&#8592;</button>
+                                    <span id="taxCounter">1 / 1</span>
+                                    <button onclick="taxCarousel.next()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REDiQ Modal -->
+            <div id="rediq" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('rediq')">&times;</span>
+                    <h2 class="modal-title">REDiQ - Data Intelligence Platform</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content"></div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">Python (Dash framework), SQL</div>
+                            </div>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="rediqImage" src="images/projects/rediq_0.webp" alt="REDiQ Screenshot" loading="lazy">
+                                <div class="gallery-controls">
+                                    <button onclick="rediqCarousel.prev()">&#8592;</button>
+                                    <span id="rediqCounter">0 / 0</span>
+                                    <button onclick="rediqCarousel.next()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arcade Modal -->
+            <div id="modal_arcade" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_arcade')">&times;</span>
+                    <h2 class="modal-title">Arcade</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">An arcade-style application developed as my final project for the HSC Software Design & Development course. It includes two classic games, 2048 and Connect Four, each built from scratch with their own graphics and gameplay mechanics to showcase principles of software design and user interaction.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">Java</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Arcade.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="arcadeImage" src="images/projects/arcade_0.webp" alt="Arcade Screenshot" loading="lazy">
+                                <div class="gallery-controls">
+                                    <button onclick="arcadeCarousel.prev()">&#8592;</button>
+                                    <span id="arcadeCounter">1 / 6</span>
+                                    <button onclick="arcadeCarousel.next()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game of Games Modal -->
+            <div id="modal_gog" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal_gog')">&times;</span>
+                    <h2 class="modal-title">Game of Games (incomplete)</h2>
+                    <div class="modal-body">
+                        <div class="modal-info">
+                            <div class="info-block">
+                                <div class="info-title">Description:</div>
+                                <div class="info-content">The Game of Games is a custom website I created for a long-running tradition with my friends: a chaotic, competitive, and often hilarious meta-game where we play a variety of board games, video games, outdoor games, and sometimes even get a little drunk, earning points as we go.</div>
+                                <br>
+                                <div class="info-content">I built the site to manage player stats, track scores, log games played, and keep a record of everything from specialty games to individual wins. It's a fun, ever-evolving project that combines my love of web development, data tracking, and game design, and it's been a great way to experiment with front-end features while keeping the vibe light and social.</div>
+                            </div>
+                            <div class="info-block">
+                                <div class="info-title">Languages:</div>
+                                <div class="info-content">HTML, CSS, Javascript, JSON</div>
+                            </div>
+                            <a href="https://github.com/dpudig-142857/Game-of-Games.git" target="_blank" class="github-button" rel="noopener noreferrer">View on GitHub</a>
+                        </div>
+                        <div class="modal-gallery">
+                            <div class="gallery">
+                                <img id="gogImage" src="images/projects/gog_0.webp" alt="Game of Games Screenshot" loading="lazy">
+                                <div class="gallery-controls">
+                                    <button onclick="gogCarousel.prev()">&#8592;</button>
+                                    <span id="gogCounter">1 / 1</span>
+                                    <button onclick="gogCarousel.next()">&#8594;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="section-divider">
+                <div class="section-header">CONTACT</div>
+            </div>
+            <div class="contact-section">
+                <div id="contact-s" class="contact-header">
+                    <h2>Excited to<br>know more?</h2>
+                    <p>Let's talk!</p>
+                </div>
+                <form  id="contact-s" class="contact-form" action="https://formspree.io/f/meoggyro" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="Name" required placeholder="Name...">
+                
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" required placeholder="Email...">
+                
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Message" rows="6" required placeholder="Message..."></textarea>
+                
+                    <button type="submit">Send Message</button>
+                    <p id="contact-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <div id="footer-link">
+                <a href="https://github.com/dpudig-142857" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                    <img class="icon" src="images/github.webp" alt="GitHub" loading="lazy">
+                    <span class="footer-box">Go to GitHub</span>
+                </a>
+            </div>
+            <div id="footer-link">
+                <a href="https://www.linkedin.com/in/dan-pudig-b536b32b5/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                    <img class="icon" src="images/linkedin.webp" alt="LinkedIn" loading="lazy">
+                    <span class="footer-box">Go to LinkedIn</span>
+                </a>
+            </div>
+            <div id="footer-link">
+                <a href="Dan Pudig's CV.pdf" download>
+                    <img class="icon" src="images/cv.webp" alt="CV" loading="lazy">
+                    <span class="footer-box">Download CV</span>
+                </a>
+            </div>
+        </div>
+        <p>© 2026 Dan Pudig</p>
+    </footer>
+</body>
+</html>
+
+
+/* index.css */
+
+:root {
+    font-size: 13px;
+    --section1: #FF5E3A;
+    --section2: #FF2A00;
+    --section3: #FF7000;
+    --section4: #FFB400;
+    --section5: #FFD700;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.95rem;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #111;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               Header Section                            */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.625rem); /* subtle blur effect */
+    -webkit-backdrop-filter: blur(0.625rem); /* Safari support */
+    border-bottom: 0.063rem solid rgba(0, 0, 0, 0.2);
+    padding: 0.625rem 1.25rem;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    transition: background 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#logo-section {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+}
+
+#logo {
+    width: clamp(1rem, 8vw, 2.7rem);
+    height: auto;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+.header-dino {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 2.188rem;
+    left: 0;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#logo:hover .header-dino {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem;
+    font-weight: 600;
+    font-size: 1rem;
+    flex: 1 1 auto;
+}
+
+nav.navbar a {
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 0.375rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+nav.navbar a:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#header-download {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+}
+
+.header-cv {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 2.188rem;
+    right: 0;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#header-download a:hover .header-cv {
+    visibility: visible;
+    opacity: 1;
+}
+
+#header-download a img {
+    width: clamp(1.25rem, 4vw, 2rem);
+    height: clamp(1.25rem, 4vw, 2rem);
+}
+
+#header-download a img:hover {
+    transform: scale(1.2);
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               Hero section                              */
+
+.hero {
+    background-image: url('images/trees.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    text-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+#hero-name {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+}
+
+#hero-job {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: 0.625rem;
+    font-weight: 300;
+}
+
+#hero-tag {
+    font-size: clamp(0.875rem, 2vw, 1.2rem);
+    margin-top: 1.25rem;
+}
+
+.typed-cursor {
+    display: inline-block;
+    margin-left: 0.125rem;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(1.25rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footprint {
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('images/dino.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 999;
+    transform: translate(-50%, -50%) scale(0.6);
+    animation: footprintFade 0.9s ease-out forwards;
+}
+
+@keyframes footprintFade {
+    from { opacity: 0.65; transform: translate(-50%, -50%) scale(0.7) rotate(var(--rotate, 0deg)); }
+    to   { opacity: 0; transform: translate(-50%, -50%) scale(0.4) rotate(var(--rotate, 0deg)); }
+}
+
+/* ----------------------------------------------------------------------- */
+/*                              Section Titles                             */
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.25rem 0 2.5rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    height: 0.25rem;
+    background: black;
+}
+
+.section-header {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.313rem;
+    text-align: center;
+    color: black;
+    margin: 0 1.25rem;
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               About section                             */
+
+#about {
+    background-color: var(--section1);
+    padding: 1.25rem 2.5rem 3.75rem;
+    height: max-content;
+}
+
+#about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+#about-left {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+#about-photo {
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.625rem solid black;
+    display: block;
+    margin: 0 auto;
+}
+
+#about-description-box {
+    background-color: #FF4D1A;
+    border: 0.5rem solid black;
+    width: 95%;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    border-radius: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow:
+        0 0.938rem 1.875rem rgba(0, 0, 0, 0.6),
+        0 0.625rem 0.938rem rgba(0, 0, 0, 0.4),
+        0 0 1.25rem rgba(255, 60, 10, 0.7);
+    word-wrap: break-word;
+}
+
+#about-description {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#about-right {
+    flex: 2 1 500px;
+    display: flex;
+    justify-content: center;
+}
+
+#about-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5vh 5vw;
+}
+
+.about-box {
+    background-color: #FF4D1A;
+    border: 0.5rem solid black;
+    width: fit-content;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    border-radius: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow:
+        0 0.938rem 1.875rem rgba(0, 0, 0, 0.6),
+        0 0.625rem 0.938rem rgba(0, 0, 0, 0.4),
+        0 0 1.25rem rgba(255, 60, 10, 0.7);
+}
+
+.about-box p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/*                              Skills section                             */
+
+#skills {
+    background-color: var(--section2);
+    padding: 1.25rem 2.5rem 3.75rem;
+}
+
+#skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3vw 4vw;
+    padding: 2rem 2vw;
+}
+
+.skill-box {
+    width: clamp(10rem, 18vw, 13rem);
+    height: 12rem;
+    background-color: #FF8500;
+    border: 0.1rem solid black;
+    border-radius: 10%;
+    box-shadow:
+        0 0.3rem 0.6rem rgba(0, 0, 0, 0.6),
+        0 0.2rem 0.4rem rgba(0, 0, 0, 0.4),
+        0 0 0.5rem rgba(255, 133, 0, 0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    font-weight: bold;
+    font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+    overflow: hidden;
+}
+
+.skill-box p {
+    word-break: break-word;
+    margin: 0;
+}
+
+.skill-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow:
+        0 1.25rem 2.5rem rgba(0, 0, 0, 0.65),
+        0 0.75rem 1.125rem rgba(0, 0, 0, 0.45),
+        0 0 1.75rem rgba(255, 133, 0, 0.9);
+}
+
+.skill {
+    width: 70%;
+    max-height: 8rem;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.skill-ring {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-ring svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg,
+.ring-fill {
+    fill: none;
+    stroke-width: 6;
+}
+
+.ring-bg {
+    stroke: rgba(0, 0, 0, 0.15);
+}
+
+.ring-fill {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-dasharray: 283; /* 2 * π * 45 */
+    stroke-dashoffset: 283; /* fully hidden until animated */
+    transition: stroke-dashoffset 1.2s ease-out;
+}
+
+.skill-box.in-view .ring-fill {
+    stroke-dashoffset: var(--offset);
+}
+
+.skill-ring .skill {
+    position: relative;
+    width: 55%;
+    max-height: 55%;
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/*                          Qualifications section                         */
+
+#qualifications {
+    background-color: var(--section3);
+    padding: 1.25rem 2.5rem 3.75rem;
+}
+
+.qual {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem 8rem;
+    padding: 2vw 4vw;
+    justify-content: center;
+}
+
+.qual-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background-color: #FFA500cc;
+    color: #000;
+    padding: 2rem;
+    width: max-content;
+    max-width: 40rem;
+    border: 0.1rem solid black;
+    border-radius: 1.5rem;
+    box-shadow:
+        0 0.3rem 0.6rem rgba(0, 0, 0, 0.6),
+        0 0.2rem 0.4rem rgba(0, 0, 0, 0.4),
+        0 0 0.5rem rgba(255, 133, 0, 0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qual-box:hover {
+    box-shadow:
+        0 1.25rem 2.5rem rgba(0, 0, 0, 0.65),
+        0 0.75rem 1.125rem rgba(0, 0, 0, 0.45),
+        0 0 1.75rem rgba(255, 133, 0, 0.9);
+}
+
+.qual-box.cert {
+    background-color: #FFB733cc;
+}
+
+.qual-box.accred {
+    background-color: #FFD966cc;
+}
+
+.qual-type {
+    background-color: #000;
+    color: #fff;
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: -0.6rem;
+    font-size: 0.75rem;
+    width: max-content;
+    align-self: center;
+}
+
+.qual-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 1.2rem 0;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    text-wrap: nowrap;
+}
+
+.qual-major {
+    font-size: 1.2rem;
+}
+
+.qual-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+
+/* ----------------------------------------------------------------------- */
+/*                             Projects section                            */
+
+#projects {
+    background-color: var(--section4);
+    padding: 1.25rem 2.5rem 3.75rem;
+}
+
+.project-section {
+    margin-bottom: 2.5rem;
+}
+
+.project-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 5rem;
+}
+
+.projects-grid a {
+    text-decoration: none;
+}
+
+.project-box {
+    background-color: #FFCB2B;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+        0 1rem 2rem rgba(0, 0, 0, 0.6),
+        0 0.7rem 1rem rgba(0, 0, 0, 0.4),
+        0 0 1.2rem rgba(255, 203, 43, 0.7);
+}
+
+.project-box:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow:
+        0 1.25rem 2.5rem rgba(0, 0, 0, 0.65),
+        0 0.75rem 1.125rem rgba(0, 0, 0, 0.45),
+        0 0 1.5rem rgba(255, 203, 43, 0.9);
+}
+
+.project-image {
+    width: 100%;
+    height: 11.25rem;
+    object-fit: cover;
+    border-bottom: 0.125rem solid #FFCB2B;
+}
+
+.project-content {
+    padding: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fae0d4;
+    margin: 8% auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 90%;
+    max-width: 75rem;
+    border: 0.25rem solid #ff4c4c;
+    box-shadow:
+        0 1rem 2rem rgba(0, 0, 0, 0.5),
+        0 0 1.2rem rgba(255, 76, 76, 0.8);
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(1.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 100%;
+}
+
+.modal-info {
+    flex: 1 0 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.info-block {
+    margin-bottom: 1rem;
+}
+
+.info-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.info-content {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.github-button {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff4c4c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.github-button:hover {
+    background-color: #e03a3a;
+    transform: translateY(-0.125rem);
+}
+
+.modal-gallery {
+    flex: 1 0 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.gallery {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    max-height: 18.75rem;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    gap: 1rem;
+}
+
+.gallery-controls button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.gallery-controls button:hover {
+    background-color: #e03a3a;
+    transform: translateY(-0.125rem);
+}
+
+
+/* ----------------------------------------------------------------------- */
+/*                             Contact section                             */
+
+#contact {
+    background-color: var(--section5);
+    text-align: center;
+    padding: 1.25rem 2.5rem;
+    min-height: 81.5vh;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0.625rem 0;
+    height: max-content;
+}
+
+#contact-s {
+    width: 31.25rem;
+    height: max-content;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    min-height: 21.875rem;
+}
+
+.contact-header h2 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin-bottom: 0.625rem;
+    color: #111;
+}
+
+.contact-header p {
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: #111;
+    font-weight: bold;
+}
+  
+.contact-form {
+    width: min(90%, 31.25rem);
+    min-height: 25rem;
+    text-align: right;
+}
+  
+.contact-form label {
+    display: block;
+    margin: 1.25rem 0 0.375rem;
+    font-weight: bold;
+    color: #111;
+    text-align: left;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 0.125rem solid var(--section2);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #111;
+    outline: none;
+}
+  
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #cc2200;
+    box-shadow: 0 0 0 0.125rem rgba(255, 42, 0, 0.2);
+}
+  
+.contact-form button {
+    margin-top: 1.563rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--section2);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+  
+.contact-form button:hover {
+    background-color: #cc2200;
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------------------- */
+/*                                   Footer                                */
+
+footer {
+    background-color: #FFEDDA;
+    color: #111;
+    padding: 0.063rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin: 0.65rem 0;
+}
+
+.footer-links a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-links a img:hover {
+    transform: scale(1.2);
+}
+
+#footer-link {
+    position: relative;
+    display: inline-block;
+}
+
+#footer-link a:hover .footer-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+.footer-box {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.375rem 0.5rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    top: -2.813rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+
+// index.js
+
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+    const offset = window.pageYOffset;
+    hero.style.backgroundPositionY = `${offset * 0.4}px`;
+});
+
+const heroSection = document.querySelector('#home');
+let lastFootprint = 0;
+let lastX = null;
+let lastY = null;
+let stepSide = 'left';
+
+heroSection.addEventListener('mousemove', (e) => {
+    const now = Date.now();
+    if (now - lastFootprint < 180) return; // throttle for spacing between steps
+    lastFootprint = now;
+
+    let angle = 0;
+    if (lastX !== null) {
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        angle = Math.atan2(dy, dx) * (180 / Math.PI) + 90; // point "feet" in movement direction
+    }
+    lastX = e.clientX;
+    lastY = e.clientY;
+
+    const footprint = document.createElement('div');
+    footprint.className = `footprint ${stepSide}`;
+    footprint.style.left = `${e.clientX}px`;
+    footprint.style.top = `${e.clientY}px`;
+    footprint.style.setProperty('--rotate', `${angle}deg`);
+    document.body.appendChild(footprint);
+
+    stepSide = stepSide === 'left' ? 'right' : 'left'; // alternate feet each step
+
+    setTimeout(() => footprint.remove(), 900);
+});
+
+const typedPhrases = [
+    'Solving problems, one semicolon at a time',
+    'Turning data into decisions',
+    'Junior Data Analyst @ Channel Seven',
+    'Frontend developer at heart',
+    'Always learning, always building',
+    'Querying my way through life',
+    'SQL by day, side projects by night',
+    'Bachelor of Science in CS & Maths',
+    'Databricks certified, water powered',
+    'Turning messy data into clean insights',
+    'Building dashboards that actually make sense',
+    'Strategy games are my other debugging hobby',
+    'UNSW grad, forever a student',
+    'Clean code, clean charts',
+    'One semicolon, one insight at a time',
+    'Automating the boring stuff since forever'
+];
+
+function shufflePhrases(arr, avoidFirst = null) {
+    let shuffled;
+    do {
+        shuffled = [...arr];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+    } while (avoidFirst !== null && shuffled[0] === avoidFirst && arr.length > 1);
+    return shuffled;
+}
+
+function typeLoop(elementId, phrases, { typeSpeed = 55, deleteSpeed = 30, pause = 1800 } = {}) {
+    const el = document.getElementById(elementId);
+    let order = shufflePhrases(phrases);
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function tick() {
+        const currentPhrase = order[phraseIndex];
+
+        if (!deleting) {
+            el.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentPhrase.length) {
+                deleting = true;
+                setTimeout(tick, pause);
+                return;
+            }
+        } else {
+            el.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                deleting = false;
+                phraseIndex++;
+                if (phraseIndex === order.length) {
+                    const lastPhrase = order[order.length - 1];
+                    order = shufflePhrases(phrases, lastPhrase); // reshuffle, but not starting with the phrase we just showed
+                    phraseIndex = 0;
+                }
+            }
+        }
+
+        setTimeout(tick, deleting ? deleteSpeed : typeSpeed);
+    }
+
+    tick();
+}
+
+typeLoop('typed-text', typedPhrases);
+
+const skillBoxes = document.querySelectorAll('.skill-box');
+
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const box = entry.target;
+            const level = parseInt(box.dataset.level, 10);
+            const circumference = 283;
+            const offset = circumference - (level / 100) * circumference;
+            const ringFill = box.querySelector('.ring-fill');
+            ringFill.style.setProperty('--offset', offset);
+            box.classList.add('in-view');
+            skillObserver.unobserve(box);
+        }
+    });
+}, { threshold: 0.4 });
+
+skillBoxes.forEach(box => skillObserver.observe(box));
+
+var form = document.getElementById("contact-s");
+  
+async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("contact-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+        } else {
+            response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+            })
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+}
+
+form.addEventListener("submit", handleSubmit);
+
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Optional: Close when clicking outside the modal
+window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};
+
+const arcadeCarousel = createCarousel({
+    images: [
+        'images/projects/arcade_0.webp',
+        'images/projects/arcade_1.webp',
+        'images/projects/arcade_2.webp',
+        'images/projects/arcade_3.webp',
+        'images/projects/arcade_4.webp',
+        'images/projects/arcade_5.webp'
+    ],
+    imageId: 'arcadeImage',
+    counterId: 'arcadeCounter'
+});
+
+const taxCarousel = createCarousel({
+    images: ['images/projects/tax_calculator_0.webp'],
+    imageId: 'taxImage',
+    counterId: 'taxCounter'
+});
+
+const metabolomicsCarousel = createCarousel({
+    images: ['images/projects/metabolomics_0.webp'],
+    imageId: 'metabolomicsImage',
+    counterId: 'metabolomicsCounter'
+});
+
+const gogCarousel = createCarousel({
+    images: ['images/projects/gog_0.webp'],
+    imageId: 'gogImage',
+    counterId: 'gogCounter'
+});
+
+function createCarousel({ images, imageId, counterId }) {
+    let currentIndex = 0;
+
+    function show(index) {
+        const img = document.getElementById(imageId);
+        const counter = document.getElementById(counterId);
+        img.src = images[index];
+        counter.textContent = `${index + 1} / ${images.length}`;
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % images.length;
+        show(currentIndex);
+    }
+
+    function prev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        show(currentIndex);
+    }
+
+    show(currentIndex);
+
+    return { next, prev, show };
+}

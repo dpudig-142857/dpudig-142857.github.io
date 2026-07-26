@@ -26,6 +26,17 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0.25rem;
+    width: 0%;
+    background: linear-gradient(to right, var(--section1), var(--section2), var(--section3), var(--section4), var(--section5));
+    z-index: 1100; /* above header's z-index: 1000 */
+    transition: width 0.1s ease-out;
+}
+
 /* ----------------------------------------------------------------------- */
 /*                               Header Section                            */
 
@@ -201,13 +212,43 @@ nav.navbar a:hover {
     margin-top: 1.25rem;
 }
 
+.typed-cursor {
+    display: inline-block;
+    margin-left: 0.125rem;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(1.25rem); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+.footprint {
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('images/dino.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 999;
+    transform: translate(-50%, -50%) scale(0.6);
+    animation: footprintFade 0.9s ease-out forwards;
+}
+
+@keyframes footprintFade {
+    from { opacity: 0.65; transform: translate(-50%, -50%) scale(0.7) rotate(var(--rotate, 0deg)); }
+    to   { opacity: 0; transform: translate(-50%, -50%) scale(0.4) rotate(var(--rotate, 0deg)); }
+}
+
 /* ----------------------------------------------------------------------- */
-/*                              Section Titles                             */
+/*                          General Section Styles                         */
 
 .section-divider {
     display: flex;
@@ -232,6 +273,39 @@ nav.navbar a:hover {
     color: black;
     margin: 0 1.25rem;
 }
+
+#about, #skills, #qualifications, #projects {
+    position: relative; /* anchors the absolutely-positioned wave */
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 200%; /* double width since it contains two tiled copies */
+    height: 100%;
+    animation: waveDrift 12s linear infinite;
+}
+
+@keyframes waveDrift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* shifts exactly one tile width, then loops */
+}
+
+.wave-into-skills path { fill: var(--section2); }
+.wave-into-qualifications path { fill: var(--section3); }
+.wave-into-projects path { fill: var(--section4); }
+.wave-into-contact path { fill: var(--section5); }
 
 /* ----------------------------------------------------------------------- */
 /*                               About section                             */
@@ -305,14 +379,13 @@ nav.navbar a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 5vh 4vw;
+    gap: 5vh 5vw;
 }
 
 .about-box {
     background-color: #FF4D1A;
     border: 0.5rem solid black;
-    width: 35%;
-    min-width: 15.625rem;
+    width: fit-content;
     padding: 1rem;
     text-align: center;
     font-weight: bold;
@@ -323,7 +396,6 @@ nav.navbar a:hover {
         0 0.938rem 1.875rem rgba(0, 0, 0, 0.6),
         0 0.625rem 0.938rem rgba(0, 0, 0, 0.4),
         0 0 1.25rem rgba(255, 60, 10, 0.7);
-    word-wrap: break-word;
 }
 
 .about-box p {
@@ -346,7 +418,7 @@ nav.navbar a:hover {
     justify-content: center;
     align-items: stretch;
     gap: 3vw 4vw;
-    padding: 2rem 4vw;
+    padding: 2rem 2vw;
 }
 
 .skill-box {
@@ -392,6 +464,53 @@ nav.navbar a:hover {
     object-fit: contain;
     display: block;
     margin-bottom: 0.5rem;
+}
+
+.skill-ring {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-ring svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg,
+.ring-fill {
+    fill: none;
+    stroke-width: 6;
+}
+
+.ring-bg {
+    stroke: rgba(0, 0, 0, 0.15);
+}
+
+.ring-fill {
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-dasharray: 283; /* 2 * π * 45 */
+    stroke-dashoffset: 283; /* fully hidden until animated */
+    transition: stroke-dashoffset 1.2s ease-out;
+}
+
+.skill-box.in-view .ring-fill {
+    stroke-dashoffset: var(--offset);
+}
+
+.skill-ring .skill {
+    position: relative;
+    width: 55%;
+    max-height: 55%;
+    margin-bottom: 0;
 }
 
 
@@ -867,3 +986,109 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
+/* ----------------------------------------------------------------------- */
+/*                         Konami Code Easter Egg                          */
+
+.chaos-shake {
+    animation: chaosShake 0.5s ease-in-out infinite;
+}
+
+.skill-box.chaos-shake {
+    overflow: visible;
+}
+
+@keyframes chaosShake {
+    0%, 100% { transform: rotate(0deg) translate(0, 0) scale(1); }
+    20% { transform: rotate(-8deg) translate(-0.4rem, 0.3rem) scale(1.03); }
+    40% { transform: rotate(6deg) translate(0.4rem, -0.3rem) scale(0.97); }
+    60% { transform: rotate(-6deg) translate(-0.3rem, 0.4rem) scale(1.03); }
+    80% { transform: rotate(8deg) translate(0.3rem, -0.4rem) scale(0.97); }
+}
+
+#page-wrapper.chaos-pulse {
+    animation: huePulse 1.5s linear infinite;
+}
+
+@keyframes huePulse {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.chaos-banner {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 1200;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+    animation: bannerPop 0.4s ease-out;
+    white-space: nowrap;
+}
+
+@keyframes bannerPop {
+    from { opacity: 0; transform: translateX(-50%) translateY(-1rem) scale(0.8); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+.chaos-emoji {
+    position: fixed;
+    top: -3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    pointer-events: none;
+    z-index: 1150;
+    animation: chaosFall linear forwards;
+}
+
+.chaos-emoji img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes chaosFall {
+    to {
+        top: 110vh;
+        transform: rotate(720deg);
+    }
+}
+
+/*.chaos-shake {
+    animation: chaosShake 0.6s ease-in-out infinite;
+}
+
+@keyframes chaosShake {
+    0%, 100% { transform: rotate(0deg) translate(0, 0); }
+    20% { transform: rotate(-6deg) translate(-0.3rem, 0.2rem); }
+    40% { transform: rotate(5deg) translate(0.3rem, -0.2rem); }
+    60% { transform: rotate(-4deg) translate(-0.2rem, 0.3rem); }
+    80% { transform: rotate(6deg) translate(0.2rem, -0.3rem); }
+}
+
+.chaos-banner {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 1200;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+    animation: bannerPop 0.4s ease-out;
+}
+
+@keyframes bannerPop {
+    from { opacity: 0; transform: translateX(-50%) translateY(-1rem) scale(0.8); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}*/
